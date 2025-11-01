@@ -11,8 +11,6 @@ public class MensajeErrorLogin implements Question<String> {
     @Override
     public String answeredBy(Actor actor) {
         try {
-            // VERIFICACIÓN RÁPIDA - sin WaitUntil
-            // Solo verifica si el mensaje está visible inmediatamente
             if (MENSAJE_ERROR.resolveFor(actor).isVisible()) {
                 String mensaje = Text.of(MENSAJE_ERROR).viewedBy(actor).asString();
                 System.out.println("Mensaje de error capturado: " + mensaje);
