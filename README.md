@@ -1,3 +1,4 @@
+![logoMHR.png](src/test/resources/files/logoMHR.png)
 # ManageHR - Sistema de Gestión de Recursos Humanos
 
 
