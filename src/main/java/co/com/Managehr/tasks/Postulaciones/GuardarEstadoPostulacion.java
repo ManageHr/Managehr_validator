@@ -22,7 +22,7 @@ public class GuardarEstadoPostulacion implements Task {
                     WaitUntil.the(GestionPostulacionesPage.BTN_GUARDAR_ESTADO,isClickable()).forNoMoreThan(10).seconds(),
                     Click.on(GestionPostulacionesPage.BTN_GUARDAR_ESTADO)
             );
-            System.out.println("Sedio click en guardar estado");
+            System.out.println("Se dio click en guardar estado");
             Thread.sleep(3000);
         }catch (Exception e){
             System.out.println("Ocurrio un error al guerdar estado");
