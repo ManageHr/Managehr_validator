@@ -21,7 +21,7 @@ public class GuardarUsuario implements Task {
                 Click.on(CrearUsuarioPage.BTN_GUARDAR)
         );
         try {
-            System.out.println("Esperando a que se procese la respuesta...");
+
             Thread.sleep(3000);
             System.out.println("Procesamiento completado - continuando con validación de alerta");
         } catch (InterruptedException e) {

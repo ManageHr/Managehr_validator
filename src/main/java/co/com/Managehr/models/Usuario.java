@@ -24,6 +24,26 @@ public class Usuario {
 
     public Usuario() {}
 
+    public Usuario(Long numeroDocumento, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, Integer tipoDocumento, String fechaNacimiento, String email, String direccion, String telefono, Integer nacionalidad, String eps, String fondoPension, Integer genero, Integer estadoCivil, String password, String repetirPassword, Integer rol) {
+        this.numeroDocumento = numeroDocumento;
+        this.primerNombre = primerNombre;
+        this.segundoNombre = segundoNombre;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;
+        this.tipoDocumento = tipoDocumento;
+        this.fechaNacimiento = fechaNacimiento;
+        this.email = email;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.nacionalidad = nacionalidad;
+        this.eps = eps;
+        this.fondoPension = fondoPension;
+        this.genero = genero;
+        this.estadoCivil = estadoCivil;
+        this.password = password;
+        this.repetirPassword = repetirPassword;
+        this.rol = rol;
+    }
 
     public Long getNumeroDocumento() { return numeroDocumento; }
     public void setNumeroDocumento(Long numeroDocumento) { this.numeroDocumento = numeroDocumento; }

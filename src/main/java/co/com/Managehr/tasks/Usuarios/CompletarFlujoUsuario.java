@@ -24,7 +24,7 @@ public class CompletarFlujoUsuario implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         System.out.println("=== INICIANDO FLUJO COMPLETO ===");
-        System.out.println("Documento a buscar: " + documentoBusqueda);
+
         try {
             System.out.println("Buscando en filtro por documento: " + documentoBusqueda);
             actor.attemptsTo(

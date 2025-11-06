@@ -23,8 +23,7 @@ public class LlenarFormularioUsuario implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         System.out.println("=== INICIANDO LLENADO DE FORMULARIO ===");
-        System.out.println("EPS: " + usuario.getEps());
-        System.out.println("Fondo Pension: " + usuario.getFondoPension());
+
         actor.attemptsTo(
                 Enter.theValue(usuario.getPrimerNombre()).into(CrearUsuarioPage.PRIMER_NOMBRE_INPUT),
                 Enter.theValue(usuario.getSegundoNombre()).into(CrearUsuarioPage.SEGUNDO_NOMBRE_INPUT),
@@ -47,5 +46,6 @@ public class LlenarFormularioUsuario implements Task {
                 Enter.theValue(usuario.getPassword()).into(CrearUsuarioPage.PASSWORD_INPUT),
                 Enter.theValue(usuario.getRepetirPassword()).into(CrearUsuarioPage.REPETIR_PASSWORD_INPUT)
         );
+        System.out.println("Datos llenados con exito");
     }
 }

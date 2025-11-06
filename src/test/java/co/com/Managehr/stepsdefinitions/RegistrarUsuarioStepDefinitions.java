@@ -38,7 +38,6 @@ public class RegistrarUsuarioStepDefinitions {
 
 
         documentoUsuario = String.valueOf(datos.get(0).getNumeroDocumento());
-        System.out.println("Documento guardado para búsqueda: " + documentoUsuario);
 
         Usuario usuario = new Usuario();
         usuario.setPrimerNombre(datos.get(0).getPrimerNombre());
