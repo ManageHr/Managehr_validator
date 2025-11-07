@@ -45,6 +45,7 @@ public class LlenarFormularioUsuario implements Task {
 
                 Enter.theValue(usuario.getPassword()).into(CrearUsuarioPage.PASSWORD_INPUT),
                 Enter.theValue(usuario.getRepetirPassword()).into(CrearUsuarioPage.REPETIR_PASSWORD_INPUT)
+
         );
         System.out.println("Datos llenados con exito");
     }

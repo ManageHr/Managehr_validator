@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/gestion_postulaciones.feature",
         glue = {"co.com.Managehr.stepsdefinitions", "co.com.Managehr.utils.hooks"},
         snippets = SnippetType.CAMELCASE,
-        tags = "@gestion_postulaciones"
+        tags = "@gestion_postulaciones",
+        plugin = {"pretty", "html:target/cucumber-reports"}
 )
 public class GestionPostulacionesRunner {
 }

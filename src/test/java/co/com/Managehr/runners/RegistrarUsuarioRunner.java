@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/registrar_usuario.feature",
         glue = {"co.com.Managehr.stepsdefinitions", "co.com.Managehr.utils.hooks"},
         snippets = SnippetType.CAMELCASE,
-        tags = "@registrar_usuario"
+        tags = "@registrar_usuario",
+        plugin = {"pretty", "html:target/cucumber-reports"}
 )
 public class RegistrarUsuarioRunner {
 }
