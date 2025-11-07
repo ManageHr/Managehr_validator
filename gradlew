@@ -232,3 +232,9 @@ eval "set -- $(
     )" '"$@"'
 
 exec "$JAVACMD" "$@"
+test {
+    testLogging {
+        showStandardStreams = true
+        events "passed", "failed", "skipped"
+    }
+}
