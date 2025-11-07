@@ -14,7 +14,6 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.util.List;
 
-// IMPORTS CORRECTOS:
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;

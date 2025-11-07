@@ -4,7 +4,7 @@ public class CredencialesInicioSesion {
     private String email;
     private String clave;
 
-    public CredencialesInicioSesion(String usuario, String clave) {
+    public CredencialesInicioSesion(String email, String clave) {
         this.email = email;
         this.clave = clave;
     }
