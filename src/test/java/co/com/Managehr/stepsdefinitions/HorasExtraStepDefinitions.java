@@ -5,6 +5,7 @@ import co.com.Managehr.questions.ValidationHorasExtra;
 import co.com.Managehr.tasks.CrearHoraExtra;
 import co.com.Managehr.userinterface.Autenticacion;
 import co.com.Managehr.userinterface.InicioManagehr;
+import co.com.Managehr.userinterface.FormHorasExtra;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
@@ -52,9 +53,19 @@ public class HorasExtraStepDefinitions {
         theActorInTheSpotlight().attemptsTo(CrearHoraExtra.con(he));
     }
 
-
     @Entonces("^debe visualizar la confirmación de envío de la solicitud$")
     public void debeVisualizarLaConfirmacionDeEnvioDeLaSolicitud() {
-        theActorInTheSpotlight().should(seeThat(ValidationHorasExtra.modalExito(), is(true)));
+        theActorInTheSpotlight().should(
+                seeThat(ValidationHorasExtra.modalExito(), is(true))
+        );
     }
+
+    @Entonces("^debe visualizar el mensaje de error en el formulario de horas extra$")
+    public void debeVisualizarElMensajeDeErrorEnElFormularioDeHorasExtra() {
+        theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(FormHorasExtra.MODAL_ERROR, isVisible()).forNoMoreThan(10).seconds(),
+                Click.on(FormHorasExtra.MODAL_ERROR_OK)
+        );
+    }
+
 }

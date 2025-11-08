@@ -34,4 +34,15 @@ public class FormHorasExtra {
 
     public static final Target ALERTA_EXITO = Target.the("Alerta/Toast éxito")
             .located(By.xpath("//*[contains(@class,'alert-success') or contains(@class,'toast-success') or contains(normalize-space(.),'Solicitud enviada') or contains(normalize-space(.),'guardada')]"));
+
+    public static final Target MODAL_ERROR = Target.the("Modal de error de campos obligatorios")
+            .located(By.xpath(
+                    "//*[contains(@class,'swal2-popup') and " +
+                            ".//*[contains(normalize-space(.),'Todos los campos son obligatorios')]]"
+            ));
+
+    public static final Target MODAL_ERROR_OK = Target.the("Botón OK del modal de error")
+            .located(By.xpath(
+                    "//button[contains(@class,'swal2-confirm') or contains(normalize-space(.),'OK')]"
+            ));
 }

@@ -13,12 +13,3 @@ Característica: Autenticación en la página de Managehr
       | email          | clave    |
       | admin@sena.com | 12345678 |
     Entonces se debe verificar que el usuario haya sido autenticado correctamente y redirigido al directorio de la página Managehr
-
-  @autenticacion_error
-  Escenario: Verificar mensaje de error con credenciales incorrectas
-    Dado que el usuario se encuentra en la página de inicio de sesión de Managehr
-    Cuando ingrese credenciales incorrectas
-      | email          | clave      |
-      | usuario@fake.com | wrongpass |
-    Entonces debe mostrarse un mensaje de error de autenticación
-    Y el mensaje de error debe contener "incorrectos"

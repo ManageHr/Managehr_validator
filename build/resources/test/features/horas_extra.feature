@@ -15,22 +15,15 @@ Característica: Registro de Horas Extra
   Escenario: Registrar horas extra exitosamente
     Cuando registra una solicitud de horas extra
       | descripcion | fecha      | tipo     | cantidad |
-      | Prueba3 QA  | 20/11/2025 | Nocturna | 3        |
+      | Prueba2 QA  | 20/11/2025 | Nocturna | 3        |
     Entonces debe visualizar la confirmación de envío de la solicitud
 
   @horas_extra
-  Escenario: Registrar horas extra con descripción vacía
-    Dado que el usuario ingresa con sus credenciales a ManageHR
-      | correo          | clave     |
-      | sharon@gmail.com| 123456    |
+  Escenario: Intentar registrar horas extra dejando un campo vacío
     Cuando registra una solicitud de horas extra
-      | descripcion | fecha      | tipo     | horas |
-      |             | 13/11/2025 | Dominical| 1     |
-    Entonces debe visualizar un mensaje de error por descripción vacía
-
-
-
-
+      | descripcion | fecha      | tipo     | cantidad |
+      |             | 20/11/2025 | Nocturna | 3        |
+    Entonces debe visualizar el mensaje de error en el formulario de horas extra
 
 
 

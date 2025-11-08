@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m48.94s</div>
+<div class="counter">53.010s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,13 +81,13 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Registrar horas extra con descripción vacía</td>
-<td class="success">38.089s</td>
+<td class="success">Intentar registrar horas extra dejando un campo vacío</td>
+<td class="success">44.795s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Registrar horas extra exitosamente</td>
-<td class="success">1m10.85s</td>
+<td class="success">8.215s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -104,26 +104,25 @@
     ?[32mDado ?[0m?[32mque el usuario ingresa con sus credenciales a ManageHR?[0m ?[90m# HorasExtraStepDefinitions.queElUsuarioIngresaConSusCredencialesAManageHR(String,String&gt;&gt;)?[0m
 
   @horas_extra
-  Escenario: Registrar horas extra con descripción vacía               ?[90m# src/test/resources/features/horas_extra.feature:22?[0m
-    ?[32mDado ?[0m?[32mque el usuario ingresa con sus credenciales a ManageHR?[0m        ?[90m# HorasExtraStepDefinitions.queElUsuarioIngresaConSusCredencialesAManageHR(String,String&gt;&gt;)?[0m
-    ?[32mCuando ?[0m?[32mregistra una solicitud de horas extra?[0m                       ?[90m# HorasExtraStepDefinitions.registraUnaSolicitudDeHorasExtra(String,String&gt;&gt;)?[0m
-    ?[32mEntonces ?[0m?[32mdebe visualizar un mensaje de error por descripción vacía?[0m ?[90m# HorasExtraStepDefinitions.debeVisualizarUnMensajeDeErrorPorDescripcionVacia()?[0m
+  Escenario: Intentar registrar horas extra dejando un campo vacío               ?[90m# src/test/resources/features/horas_extra.feature:22?[0m
+    ?[32mCuando ?[0m?[32mregistra una solicitud de horas extra?[0m                                 ?[90m# HorasExtraStepDefinitions.registraUnaSolicitudDeHorasExtra(String,String&gt;&gt;)?[0m
+    ?[32mEntonces ?[0m?[32mdebe visualizar el mensaje de error en el formulario de horas extra?[0m ?[90m# HorasExtraStepDefinitions.debeVisualizarElMensajeDeErrorEnElFormularioDeHorasExtra()?[0m
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>nov. 06, 2025 6:00:29 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+<pre>nov. 07, 2025 9:45:13 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: [], prefs: {behavior: allow}}, loggingPrefs: org.openqa.selenium.logging..., name: proyecto, platform: ANY, unhandledPromptBehavior: ignore, version: }
-Starting ChromeDriver 141.0.7390.122 (b477534e7e10d193e916cd4e2967c589383625b2-refs/branch-heads/7390@{#2667}) on port 39560
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --incognito;--start-maximized, goog:chromeOptions: {args: [--incognito, --start-maximized], extensions: [], prefs: {behavior: allow}}, loggingPrefs: org.openqa.selenium.logging..., name: proyecto, platform: ANY, unhandledPromptBehavior: ignore, version: }
+Starting ChromeDriver 141.0.7390.122 (b477534e7e10d193e916cd4e2967c589383625b2-refs/branch-heads/7390@{#2667}) on port 22385
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully on port 39560.
-[1762470031.316][WARNING]: This version of ChromeDriver has not been tested with Chrome version 142.
-nov. 06, 2025 6:00:31 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+ChromeDriver was started successfully on port 22385.
+[1762569915.139][WARNING]: This version of ChromeDriver has not been tested with Chrome version 142.
+nov. 07, 2025 9:45:15 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
@@ -135,16 +134,16 @@ INFORMACIÓN: Detected dialect: W3C
 
 TEST PASSED: Registrar horas extra exitosamente
 ----------------------------------------------------------------------------
-nov. 06, 2025 6:01:40 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+nov. 07, 2025 9:45:21 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: [], prefs: {behavior: allow}}, loggingPrefs: org.openqa.selenium.logging..., name: proyecto, platform: ANY, unhandledPromptBehavior: ignore, version: }
-Starting ChromeDriver 141.0.7390.122 (b477534e7e10d193e916cd4e2967c589383625b2-refs/branch-heads/7390@{#2667}) on port 8863
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --incognito;--start-maximized, goog:chromeOptions: {args: [--incognito, --start-maximized], extensions: [], prefs: {behavior: allow}}, loggingPrefs: org.openqa.selenium.logging..., name: proyecto, platform: ANY, unhandledPromptBehavior: ignore, version: }
+Starting ChromeDriver 141.0.7390.122 (b477534e7e10d193e916cd4e2967c589383625b2-refs/branch-heads/7390@{#2667}) on port 7450
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully on port 8863.
-[1762470101.195][WARNING]: This version of ChromeDriver has not been tested with Chrome version 142.
-nov. 06, 2025 6:01:41 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+ChromeDriver was started successfully on port 7450.
+[1762569922.643][WARNING]: This version of ChromeDriver has not been tested with Chrome version 142.
+nov. 07, 2025 9:45:22 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
            __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
@@ -154,10 +153,10 @@ INFORMACIÓN: Detected dialect: W3C
  (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
           \_\                                                            
 
-TEST FAILED: Registrar horas extra con descripción vacía
---------------------------------------------------------------------------
+TEST FAILED WITH ERROR: Intentar registrar horas extra dejando un campo vacío
+---------------------------------------------------------------------
 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Sharon clicks on Enviar Solicitud
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected enabled element was not enabled
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - element click intercepted: Element &lt;button _ngcontent-ng-c2921343036=&quot;&quot; type=&quot;submit&quot; class=&quot;btn-submit&quot;&gt;...&lt;/button&gt; is not clickable at point (462, 530). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-center swal2-backdrop-show&quot; data-swal2-theme=&quot;light&quot; style=&quot;overflow-y: auto;&quot;&gt;...&lt;/div&gt;
 </pre>
 </span>
 </div>
@@ -169,7 +168,7 @@ TEST FAILED: Registrar horas extra con descripción vacía
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 6/11/2025, 6:02:19 p. m.</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 7 nov. 2025 21:46:07</p>
 </div>
 </div>
 </body>

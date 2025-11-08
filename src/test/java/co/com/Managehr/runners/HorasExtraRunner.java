@@ -1,5 +1,6 @@
 package co.com.Managehr.runners;
 
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
@@ -12,4 +13,11 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
         snippets = SnippetType.CAMELCASE,
         plugin = {"pretty"}
 )
-public class HorasExtraRunner { }
+public class HorasExtraRunner {
+
+    @BeforeClass
+    public static void configurarIncognito() {
+
+        System.setProperty("chrome.switches", "--incognito;--start-maximized");
+    }
+}

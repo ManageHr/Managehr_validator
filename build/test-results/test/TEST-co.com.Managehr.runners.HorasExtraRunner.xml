@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="co.com.Managehr.runners.HorasExtraRunner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="DESKTOP-1B2TGBQ" time="0.0">
+<testsuite name="co.com.Managehr.runners.HorasExtraRunner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="DESKTOP-BHKU50F" time="0.0">
   <properties/>
   <system-out><![CDATA[Característica: Registro de Horas Extra
   Como usuario autenticado en ManageHR
@@ -11,8 +11,8 @@
   Antecedentes:                                                 ?[90m# src/test/resources/features/horas_extra.feature:9?[0m
 
 2 Scenarios (?[32m2 passed?[0m)
-7 Steps (?[32m7 passed?[0m)
-1m49,117s
+6 Steps (?[32m6 passed?[0m)
+0m53.155s
 
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
@@ -51,8 +51,8 @@ TEST STARTED: Registrar horas extra exitosamente
   |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
                                                                   
 
-TEST STARTED: Registrar horas extra con descripción vacía
--------------------------------------------------------------------(registro-de-horas-extra;registrar-horas-extra-con-descripción-vacía)
+TEST STARTED: Intentar registrar horas extra dejando un campo vacío
+-------------------------------------------------------------------(registro-de-horas-extra;intentar-registrar-horas-extra-dejando-un-campo-vacío)
 [pool-2-thread-2] INFO net.thucydides.core.requirements.PackageRequirementsTagProvider - Loading requirements from package requirements at: net.thucydides.showcase.cucumber.junit
 [pool-2-thread-1] INFO net.thucydides.core.requirements.PackageRequirementsTagProvider - Loading requirements from package requirements at: net.thucydides.showcase.cucumber.junit
 log4j:WARN No appenders could be found for logger (freemarker.cache).
