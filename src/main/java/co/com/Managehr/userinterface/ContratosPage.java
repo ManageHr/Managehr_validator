@@ -14,29 +14,29 @@ public class ContratosPage extends PageObject {
 
     public static final Target INPUT_NUMERO_DOCUMENTO = Target.the("Número de Documento")
             .located(By.xpath(
-                    "//label[contains(.,'Número de Documento')]/following::input[1]" +
-                            " | //input[@placeholder='0']"
+                    "//label[normalize-space()='Número de Documento']/following::input[1]"
             ));
 
     public static final Target SELECT_TIPO_CONTRATO = Target.the("Tipo de Contrato")
             .located(By.xpath(
-                    "//label[contains(.,'Tipo de Contrato')]/following::select[1]"
+                    "//label[normalize-space()='Tipo de Contrato']/following::select[1]"
             ));
 
-    public static final Target SELECT_ESTADO = Target.the("Estado")
+    public static final Target SELECT_ESTADO = Target.the("Estado del contrato")
             .located(By.xpath(
                     "//label[normalize-space()='Estado']/following::select[1]"
             ));
 
-    public static final Target INPUT_FECHA_INGRESO = Target.the("Fecha Ingreso")
+    // === AQUÍ EL CAMBIO IMPORTANTE ===
+    // NO usamos @placeholder porque en <input type='date'> el texto dd/mm/aaaa no es placeholder.
+    public static final Target INPUT_FECHA_INGRESO = Target.the("Fecha de Ingreso")
             .located(By.xpath(
-                    "//label[contains(.,'Fecha Ingreso')]/following::input[@placeholder='dd/mm/aaaa'][1]"
+                    "//label[contains(normalize-space(),'Fecha Ingreso')]/following::input[1]"
             ));
 
-    public static final Target INPUT_FECHA_FINAL = Target.the("Fecha Finalización")
+    public static final Target INPUT_FECHA_FINAL = Target.the("Fecha de Finalización")
             .located(By.xpath(
-                    "//label[contains(.,'Fecha Finalización') or contains(.,'Fecha Final')]" +
-                            "/following::input[@placeholder='dd/mm/aaaa'][1]"
+                    "//label[contains(normalize-space(),'Fecha Finalización')]/following::input[1]"
             ));
 
     public static final Target SELECT_AREA = Target.the("Área")
