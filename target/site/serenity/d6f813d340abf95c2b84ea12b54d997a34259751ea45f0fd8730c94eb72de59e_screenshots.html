@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-11-2025 21:52</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-11-2025 22:17</span>
     <br style="clear:left"/>
 </div>
 
@@ -197,9 +197,9 @@ Para mantener actualizada la información contractual del personal
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="error-color">Registrar un nuevo contrato
+                                <span class="failing-color">Registrar un nuevo contrato
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -222,7 +222,7 @@ Para mantener actualizada la información contractual del personal
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Invalid argument exception: invalid argument: File not found : a</span>
+                    <span class="error-message error-message-title">Assertion error: Expected: (true) but: was (false)</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -238,11 +238,11 @@ Para mantener actualizada la información contractual del personal
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>org.openqa.selenium.InvalidArgumentException </h4>
+                    <h4>java.lang.AssertionError </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>co.com.Managehr.tasks.CrearContrato.performAs(CrearContrato.java:120)<br />co.com.Managehr.stepsdefinitions.ContratosStepDefinitions.registraUnNuevoContratoEnElModuloDeContratos(ContratosStepDefinitions.java:20)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                        <pre>co.com.Managehr.stepsdefinitions.ContratosStepDefinitions.elContratoConDocumentoDebeQuedarRegistradoEnLaTablaDeContratos(ContratosStepDefinitions.java:27)<br />✽.el contrato con documento "103293999" debe quedar registrado en la tabla de contratos(src/test/resources/features/gestion_contratos.feature:17)<br /></pre>
                     </div>
 
                 </div>
@@ -252,7 +252,7 @@ Para mantener actualizada la información contractual del personal
 
 
                 <div class="panel-body">
-                    <a href="pagesource15253028019461541174.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource9959014629197820358.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
@@ -268,33 +268,39 @@ Para mantener actualizada la información contractual del personal
                 <img src="553fec5c9cb3f67c400103f58da7af52f9bf019f9641ebcd66e76e9e0a2873e3.png" title=" Usuario autenticarse" width="1370"/>
                 <img src="553fec5c9cb3f67c400103f58da7af52f9bf019f9641ebcd66e76e9e0a2873e3.png" title=" usuario enters 'admin@sena.com' into Ingreso del usuario" width="1370"/>
                 <img src="b118728f9b8bf81e0a0d39c99c4d658b79dc674eafd385d3acc967d41a7f3df4.png" title=" usuario enters '123456' into Ingreso el password" width="1370"/>
-                <img src="ce7a9fb5fdd87e4a5df33bd6448798844ff7cc78a4e776c70fbc8c934688c241.png" title=" usuario clicks on click boton inicio sesion" width="1370"/>
+                <img src="8d0a8b3e4f0473c994c76a6396bfd95cfa1e471c1abba6a8ab627edabdcb69e0.png" title=" usuario clicks on click boton inicio sesion" width="1370"/>
                 <img src="7de6dfb989ec2309d507a48162eb5bc9755fc2700af3134f675e378d81877ce8.png" title=" Usuario autenticarse (completed)" width="1370"/>
                 <img src="7de6dfb989ec2309d507a48162eb5bc9755fc2700af3134f675e378d81877ce8.png" title=" Cuando ingrese las credenciales correctas (correo y clave)
 | email | clave |
 | admin@sena.com | 123456 | (completed)" width="1370"/>
                 <img src="e87ad4a548c69ae57134db27b176b16ce519ed599a26164a2a1a020af7042705.png" title=" Y registra un nuevo contrato en el m&oacute;dulo de contratos
 | documento | tipoContrato | estado | fechaIngreso | fechaFinal | area | cargo | archivo |
-| 103293999 | Contrato a t&eacute;rmino fijo | Activo | 01/05/2024 | 01/05/2026 | Finanzas | Empleado | contratoDemo.pdf |" width="1370"/>
+| 103293999 | Contrato a t&eacute;rmino fijo | Activo | 01/05/2024 | 01/05/2025 | Finanzas | Empleado | contratoDemo.pdf |" width="1370"/>
                 <img src="e87ad4a548c69ae57134db27b176b16ce519ed599a26164a2a1a020af7042705.png" title=" Usuario crear contrato" width="1370"/>
                 <img src="e87ad4a548c69ae57134db27b176b16ce519ed599a26164a2a1a020af7042705.png" title=" usuario clicks on Opci&oacute;n del men&uacute; Contratos" width="1370"/>
-                <img src="9730b57acf26c9c260774390c9a210e58b3b720a90a5cf8d8783104fc800a59e.png" title=" usuario clicks on Bot&oacute;n Agregar contrato" width="1370"/>
-                <img src="43a6f131923c8a06e4c25b84b3cc9cd8514ade2fa322b1d24ad3afb2e3a447dd.png" title=" usuario clicks on N&uacute;mero de Documento" width="1370"/>
-                <img src="bbef44928e838ff193d535435cd5e28c6d1f82a297d1ac0087799e41100c0f58.png" title=" usuario enters '103293999' into N&uacute;mero de Documento" width="1370"/>
-                <img src="f97a7ab691a30a6f131d1e42dbf812a31bf7b8f157931daccdb4697e5cce3d29.png" title=" usuario types 'TAB' in N&uacute;mero de Documento" width="1370"/>
-                <img src="8e2cb1ffa5e8ec3047ff1a1ab9160e8bc369521ad2740eaba0de41fbab295745.png" title=" usuario select Contrato a t&eacute;rmino fijo on Tipo de Contrato" width="1370"/>
-                <img src="d876a29330e8f415c80ed595c50b946333ae199cd19536472d13747e95b43089.png" title=" usuario types 'TAB' in Tipo de Contrato" width="1370"/>
-                <img src="6fe600b9e20db0fb1066cd1634e96c42b53f803b89aa0b0c4c0c8b3e15820337.png" title=" usuario select Activo on Estado del contrato" width="1370"/>
-                <img src="4d03056af3ea7959d305d4600667918d1a1f718ab60a1e20c0a2dbaa69cb0ec8.png" title=" usuario types 'TAB' in Estado del contrato" width="1370"/>
-                <img src="f8864faceb248e2d003734cf1d57f488526801f84f87f6581942dfe6005b1d20.png" title=" usuario clicks on Fecha de Ingreso" width="1370"/>
-                <img src="f5ae0e2c75317fa8c400a6d17c1653a57880a4c7d5c571599de261935fa56b7e.png" title=" usuario enters '01/05/2024' into Fecha de Ingreso" width="1370"/>
-                <img src="cf6d217c06de304e066d8852fb1cc5e4371dfe32c8f4c30116aa41ad1c02addf.png" title=" usuario types 'TAB' in Fecha de Ingreso" width="1370"/>
-                <img src="6d628d662a061e1ac7012dfeb23ff4622534ec28a1be3876021e076aef9570e4.png" title=" usuario clicks on Fecha de Finalizaci&oacute;n" width="1370"/>
-                <img src="84a33e2e110898518d91a53aee112c19efcd0f419dc8604f4ec29f69d2402b34.png" title=" usuario enters '01/05/2026' into Fecha de Finalizaci&oacute;n" width="1370"/>
-                <img src="ae1786dde7926a9277304bb2d4076f9fc6fe8e45e4d9694fdd413b9be148f255.png" title=" usuario types 'TAB' in Fecha de Finalizaci&oacute;n" width="1370"/>
-                <img src="4a18aefc548717081de840a78e5d6632227d9e5bdd10a3336a21f1ffa634f698.png" title=" usuario select Finanzas on &Aacute;rea" width="1370"/>
-                <img src="eaea00524c9e9f690c797f7ffde61f02fe3d1811d1002decdf967428c95a3ffe.png" title=" usuario select Empleado on Cargo" width="1370"/>
-                <img src="eaea00524c9e9f690c797f7ffde61f02fe3d1811d1002decdf967428c95a3ffe.png" title=" usuario enters 'D:\Managehr_validator\src\test\resources\files\contratoDemo.pdf' into Documento Adjunto: <span class='error-color'>ERROR</span>" width="1370"/>
+                <img src="0a5d7f52246bc0e2821c943a19000f8604811757a3bb996f103fa23d3632575a.png" title=" usuario clicks on Bot&oacute;n Agregar contrato" width="1370"/>
+                <img src="23bcfac4e9203d93f716a6f6d8e5716581725e8d0d1c0fd074d240aa34d78074.png" title=" usuario clicks on N&uacute;mero de Documento" width="1370"/>
+                <img src="e980fc01275a53a094ccded500e6afceb8bbe9fb7f3cce8e0c6ed9423519b104.png" title=" usuario enters '103293999' into N&uacute;mero de Documento" width="1370"/>
+                <img src="667957697938d3b0c081d6eb4a2c08ab2960aba2d078a631816c50ff628f83b7.png" title=" usuario types 'TAB' in N&uacute;mero de Documento" width="1370"/>
+                <img src="2de189d6f2ebc414c234b3b639eb09b6bfe125dd611211512c0abd84ea6ecbd7.png" title=" usuario select Contrato a t&eacute;rmino fijo on Tipo de Contrato" width="1370"/>
+                <img src="4e0744c894d1a26116c8071980c6aa26243ad7bcc4ba99113f49ddbe9e9518f6.png" title=" usuario types 'TAB' in Tipo de Contrato" width="1370"/>
+                <img src="feabe755eaeb32b3e08ecedf7125a74a35010a54b8581117b5316f8926d152f4.png" title=" usuario select Activo on Estado del contrato" width="1370"/>
+                <img src="bb1625a6465deac893f5454aee0ae08517416e9fd5c7930d862b675f5b7a0f62.png" title=" usuario types 'TAB' in Estado del contrato" width="1370"/>
+                <img src="77bc0d6b69e186778b4b0f97ecd8b253ef760f9dd37b8d563cce2615c45cc834.png" title=" usuario clicks on Fecha de Ingreso" width="1370"/>
+                <img src="28890e83adc05ece86115838279d35584bd152a97d903d635d71e17282336d6d.png" title=" usuario enters '01/05/2024' into Fecha de Ingreso" width="1370"/>
+                <img src="3998cd05eb219adfb40a1c49394f0240aa379d4162e712e54fefadb867711e22.png" title=" usuario types 'TAB' in Fecha de Ingreso" width="1370"/>
+                <img src="1541ea2df14713e9a0a86ad034daef522ff268d69b3352a1e7d75a6564fc5028.png" title=" usuario clicks on Fecha de Finalizaci&oacute;n" width="1370"/>
+                <img src="95400bb5f1bbbdf16704a4c858233446541004c28cf8bcb5691c47a65b975ab6.png" title=" usuario enters '01/05/2025' into Fecha de Finalizaci&oacute;n" width="1370"/>
+                <img src="251c8889e1c3d55f9adb58e8c940860f19c6277bbfde255829a7f0f47bcd99cc.png" title=" usuario types 'TAB' in Fecha de Finalizaci&oacute;n" width="1370"/>
+                <img src="d8aae43a4c6c79bdc95a7d41ebdf20907356d8800582170d612edd8ffc0efb05.png" title=" usuario select Finanzas on &Aacute;rea" width="1370"/>
+                <img src="dc7fca94ba88eb6f8153e225f3db261e2b95477bedb4be0b526ba844eb14dbff.png" title=" usuario select Empleado on Cargo" width="1370"/>
+                <img src="0670a04b8ed16291806d6d1a60beb1c3776807ff7b2e5396fdb7049ddd37246c.png" title=" usuario clicks on Bot&oacute;n Guardar Contrato" width="1370"/>
+                <img src="3c24f908fe578f8a1c3ad3d5dc03cdc5d47b036321d6b9e010b92df7e5cb7c3a.png" title=" Usuario crear contrato (completed)" width="1370"/>
+                <img src="3c24f908fe578f8a1c3ad3d5dc03cdc5d47b036321d6b9e010b92df7e5cb7c3a.png" title=" Y registra un nuevo contrato en el m&oacute;dulo de contratos
+| documento | tipoContrato | estado | fechaIngreso | fechaFinal | area | cargo | archivo |
+| 103293999 | Contrato a t&eacute;rmino fijo | Activo | 01/05/2024 | 01/05/2025 | Finanzas | Empleado | contratoDemo.pdf | (completed)" width="1370"/>
+                <img src="6b3213c745b3f1b05fc219712810d12371d26a46ee99c5562c6a0d02cacbe187.png" title=" Entonces el contrato con documento &quot;103293999&quot; debe quedar registrado en la tabla de contratos" width="1370"/>
+                <img src="6b3213c745b3f1b05fc219712810d12371d26a46ee99c5562c6a0d02cacbe187.png" title=" Then validacion contrato should be (true): <span class='failing-color'>FAILURE</span>" width="1370"/>
             </div>
         </div>
 

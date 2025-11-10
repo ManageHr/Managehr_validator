@@ -11,6 +11,7 @@ import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import net.serenitybdd.screenplay.actions.Hit;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
+import java.io.File;
 
 import java.nio.file.Paths;
 
@@ -117,10 +118,22 @@ public class CrearContrato implements Task {
 
         // Documento adjunto (si se configuró)
         if (!rutaArchivo.isEmpty()) {
-            actor.attemptsTo(
-                    Scroll.to(ContratosPage.INPUT_DOCUMENTO_ADJUNTO),
-                    Enter.theValue(rutaArchivo).into(ContratosPage.INPUT_DOCUMENTO_ADJUNTO)
-            );
+            File archivo = new File(rutaArchivo);
+            System.out.println("Ruta archivo adjunto: " + archivo.getAbsolutePath()
+                    + " - existe? " + archivo.exists());
+
+            if (archivo.exists()) {
+                // Solo hacemos sendKeys, NADA de Enter.theValue()
+                actor.attemptsTo(
+                        Scroll.to(ContratosPage.INPUT_DOCUMENTO_ADJUNTO)
+                );
+
+                ContratosPage.INPUT_DOCUMENTO_ADJUNTO
+                        .resolveFor(actor)
+                        .sendKeys(archivo.getAbsolutePath());
+            } else {
+                System.out.println("⚠ NO EXISTE el archivo adjunto: " + archivo.getAbsolutePath());
+            }
         }
 
         // Guardar contrato

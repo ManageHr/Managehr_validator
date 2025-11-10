@@ -13,5 +13,5 @@ Característica: Gestión de contratos
       | admin@sena.com | 123456 |
     Y registra un nuevo contrato en el módulo de contratos
       | documento | tipoContrato            | estado | fechaIngreso | fechaFinal   | area     | cargo    | archivo          |
-      | 103293999 | Contrato a término fijo | Activo | 01/05/2024   | 01/05/2026   | Finanzas | Empleado | contratoDemo.pdf |
+      | 103293999 | Contrato a término fijo | Activo | 01/05/2024   | 01/05/2025   | Finanzas | Empleado | contratoDemo.pdf |
     Entonces el contrato con documento "103293999" debe quedar registrado en la tabla de contratos
