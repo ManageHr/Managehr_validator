@@ -1,4 +1,5 @@
 package co.com.Managehr.tasks;
+
 import co.com.Managehr.models.CredencialesInicioSesion;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -23,10 +24,12 @@ public class Autenticarse implements Task{
     public <T extends Actor> void performAs(T actor) {
         CredencialesInicioSesion credencial = credenciales.get(0);
 
+     
+
         System.out.println("Ejecutando login con: " + credencial.getEmail());
 
         actor.attemptsTo(
-                WaitUntil.the(INPUT_USUARIO, isVisible()).forNoMoreThan(10).seconds(),
+                WaitUntil.the(INPUT_USUARIO, isVisible()).forNoMoreThan(5).seconds(),
                 Enter.theValue(credencial.getEmail()).into(INPUT_USUARIO),
                 Enter.theValue(credencial.getClave()).into(INPUT_CLAVE),
                 Click.on(BTN_INICIOSESION)

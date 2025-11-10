@@ -11,6 +11,8 @@ public class Autenticacion extends PageObject {
             located(By.id("loginPassword"));
     public static Target BTN_INICIOSESION = Target.the("click boton inicio sesion")
             .located(By.cssSelector("button[type='submit']"));
+    public static Target MENSAJE_ERROR = Target.the("Mensaje de error de login")
+            .located(By.xpath("/html/body/app-root/app-login/div/div/div[1]/form/div[4]"));
 
     public static Target MENSAJE_LOGIN = Target.the("mensaje de login")
             .locatedBy("//div[contains(@class, 'alert-danger')]");
