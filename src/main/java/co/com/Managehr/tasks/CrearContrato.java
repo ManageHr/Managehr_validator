@@ -34,7 +34,7 @@ public class CrearContrato implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        // Ruta del archivo adjunto (si viene en el feature)
+
         String rutaArchivo = "";
         if (datos.getArchivo() != null && !datos.getArchivo().trim().isEmpty()) {
             rutaArchivo = Paths.get("src", "test", "resources", "files", datos.getArchivo())
@@ -42,7 +42,7 @@ public class CrearContrato implements Task {
                     .toString();
         }
 
-        // Ir al módulo de contratos y abrir el modal
+
         actor.attemptsTo(
                 Scroll.to(ContratosPage.MENU_CONTRATOS),
                 WaitUntil.the(ContratosPage.MENU_CONTRATOS, isClickable()).forNoMoreThan(10).seconds(),
@@ -51,11 +51,11 @@ public class CrearContrato implements Task {
                 WaitUntil.the(ContratosPage.BTN_AGREGAR_CONTRATO, isClickable()).forNoMoreThan(10).seconds(),
                 Click.on(ContratosPage.BTN_AGREGAR_CONTRATO),
 
-                // Asegurarnos que el modal esté listo
+
                 WaitUntil.the(ContratosPage.INPUT_NUMERO_DOCUMENTO, isVisible()).forNoMoreThan(10).seconds()
         );
 
-        // Número de documento
+
         actor.attemptsTo(
                 Scroll.to(ContratosPage.INPUT_NUMERO_DOCUMENTO),
                 Click.on(ContratosPage.INPUT_NUMERO_DOCUMENTO),
@@ -63,7 +63,7 @@ public class CrearContrato implements Task {
                 Hit.the(Keys.TAB).into(ContratosPage.INPUT_NUMERO_DOCUMENTO)
         );
 
-        // Tipo de contrato
+
         actor.attemptsTo(
                 Scroll.to(ContratosPage.SELECT_TIPO_CONTRATO),
                 WaitUntil.the(ContratosPage.SELECT_TIPO_CONTRATO, isVisible()).forNoMoreThan(5).seconds(),
@@ -71,7 +71,7 @@ public class CrearContrato implements Task {
                 Hit.the(Keys.TAB).into(ContratosPage.SELECT_TIPO_CONTRATO)
         );
 
-        // Estado
+
         actor.attemptsTo(
                 Scroll.to(ContratosPage.SELECT_ESTADO),
                 WaitUntil.the(ContratosPage.SELECT_ESTADO, isVisible()).forNoMoreThan(5).seconds(),
@@ -79,9 +79,7 @@ public class CrearContrato implements Task {
                 Hit.the(Keys.TAB).into(ContratosPage.SELECT_ESTADO)
         );
 
-        // ==================
-        // FECHA DE INGRESO
-        // ==================
+
         if (datos.getFechaIngreso() != null && !datos.getFechaIngreso().trim().isEmpty()) {
             actor.attemptsTo(
                     Scroll.to(ContratosPage.INPUT_FECHA_INGRESO),
@@ -92,9 +90,7 @@ public class CrearContrato implements Task {
             );
         }
 
-        // =====================
-        // FECHA DE FINALIZACIÓN
-        // =====================
+
         if (datos.getFechaFinal() != null && !datos.getFechaFinal().trim().isEmpty()) {
             actor.attemptsTo(
                     Scroll.to(ContratosPage.INPUT_FECHA_FINAL),
@@ -105,7 +101,7 @@ public class CrearContrato implements Task {
             );
         }
 
-        // Área y Cargo
+
         actor.attemptsTo(
                 Scroll.to(ContratosPage.SELECT_AREA),
                 WaitUntil.the(ContratosPage.SELECT_AREA, isVisible()).forNoMoreThan(5).seconds(),
@@ -116,14 +112,14 @@ public class CrearContrato implements Task {
                 SelectFromOptions.byVisibleText(datos.getCargo()).from(ContratosPage.SELECT_CARGO)
         );
 
-        // Documento adjunto (si se configuró)
+
         if (!rutaArchivo.isEmpty()) {
             File archivo = new File(rutaArchivo);
             System.out.println("Ruta archivo adjunto: " + archivo.getAbsolutePath()
                     + " - existe? " + archivo.exists());
 
             if (archivo.exists()) {
-                // Solo hacemos sendKeys, NADA de Enter.theValue()
+
                 actor.attemptsTo(
                         Scroll.to(ContratosPage.INPUT_DOCUMENTO_ADJUNTO)
                 );
@@ -136,14 +132,14 @@ public class CrearContrato implements Task {
             }
         }
 
-        // Guardar contrato
+
         actor.attemptsTo(
                 Scroll.to(ContratosPage.BTN_GUARDAR_CONTRATO),
                 WaitUntil.the(ContratosPage.BTN_GUARDAR_CONTRATO, isClickable()).forNoMoreThan(5).seconds(),
                 Click.on(ContratosPage.BTN_GUARDAR_CONTRATO)
         );
 
-        // Pausa pequeña para que se actualice la tabla
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {

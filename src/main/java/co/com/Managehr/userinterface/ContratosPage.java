@@ -27,8 +27,7 @@ public class ContratosPage extends PageObject {
                     "//label[normalize-space()='Estado']/following::select[1]"
             ));
 
-    // === AQUÍ EL CAMBIO IMPORTANTE ===
-    // NO usamos @placeholder porque en <input type='date'> el texto dd/mm/aaaa no es placeholder.
+
     public static final Target INPUT_FECHA_INGRESO = Target.the("Fecha de Ingreso")
             .located(By.xpath(
                     "//label[contains(normalize-space(),'Fecha Ingreso')]/following::input[1]"
