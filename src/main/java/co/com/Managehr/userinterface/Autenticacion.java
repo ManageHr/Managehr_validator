@@ -16,4 +16,8 @@ public class Autenticacion extends PageObject {
             .locatedBy("//div[contains(@class, 'alert-danger')]");
     public static Target BTN_VER_OFERTAS = Target.the("boton ver ofertas laborales")
             .located(By.cssSelector("button[routerlink*='register']"));
+    public static Target MENSAJE_ERROR = Target.the("Mensaje de error de login")
+            .located(By.xpath("/html/body/app-root/app-login/div/div/div[1]/form/div[4]"));
+    public static Target ALERTA_ERROR = Target.the("alerta de error")
+            .located(By.xpath("/html/body/app-root/app-login/div/div/div[1]/form/div[4]"));
 }
