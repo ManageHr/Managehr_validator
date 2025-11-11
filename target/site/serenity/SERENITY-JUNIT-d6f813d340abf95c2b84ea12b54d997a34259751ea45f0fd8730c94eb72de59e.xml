@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Gestión de contratos" skipped="0" tests="1" time="62.29" timestamp="2025-11-09 10:26:24"><testcase name="Registrar un nuevo contrato"><failure message="&#13;&#10;Expected: &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">&#13;
-Expected: &lt;true&gt;&#13;
-     but: was &lt;false&gt;</failure><system-err>&#13;
-Expected: &lt;true&gt;&#13;
-     but: was &lt;false&gt;&#13;
-co.com.Managehr.stepsdefinitions.ContratosStepDefinitions.elContratoConDocumentoDebeQuedarRegistradoEnLaTablaDeContratos(ContratosStepDefinitions.java:27)&#13;
-✽.el contrato con documento "12345678990" debe quedar registrado en la tabla de contratos(src/test/resources/features/gestion_contratos.feature:17)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Gestión de contratos" skipped="0" tests="1" time="69.85" timestamp="2025-11-10 11:42:09"><testcase name="Registrar un nuevo contrato"/></testsuite>

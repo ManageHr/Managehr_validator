@@ -2,9 +2,13 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <mapping directory="" vcs="Git" />
 =======
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
 >>>>>>> c9090b0f543115ba5a4b214928faf8b8f5782654
+=======
+    <mapping directory="" vcs="Git" />
+>>>>>>> 97f9c47 (Se sube actualización de contratos con procesos completos)
   </component>
 </project>

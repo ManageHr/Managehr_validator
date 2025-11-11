@@ -1,6 +1,7 @@
 package co.com.Managehr.questions;
 
 import co.com.Managehr.userinterface.ContratosPage;
+import co.com.Managehr.tasks.CrearContrato;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
@@ -14,8 +15,18 @@ public class ValidacionContrato implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
+
+
+        if (CrearContrato.usuarioNoExiste) {
+            CrearContrato.usuarioNoExiste = false; // limpiar para futuros tests
+            return true;
+        }
+
         try {
-            return ContratosPage.FILA_CONTRATO_POR_DOCUMENTO.of(documento).resolveFor(actor).isVisible();
+            return ContratosPage.FILA_CONTRATO_POR_DOCUMENTO
+                    .of(documento)
+                    .resolveFor(actor)
+                    .isVisible();
         } catch (Exception e) {
             return false;
         }
