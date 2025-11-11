@@ -10,7 +10,7 @@
 
 1 Scenarios (?[32m1 passed?[0m)
 8 Steps (?[32m8 passed?[0m)
-1m28,514s
+1m8,401s
 
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
