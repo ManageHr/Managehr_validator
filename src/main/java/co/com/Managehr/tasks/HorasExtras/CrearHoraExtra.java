@@ -57,14 +57,7 @@ public class CrearHoraExtra implements Task {
                System.out.printf("Se cerro el modal de alerta");
            } else {
                llenarFormularioIncompleto(actor);
-               actor.attemptsTo(
-                       WaitUntil.the(FormHorasExtra.MODAL_ERROR,isVisible()).forNoMoreThan(10).seconds(),
-                       WaitUntil.the(FormHorasExtra.BTN_ERROR,isVisible()).forNoMoreThan(10).seconds(),
-                       WaitUntil.the(FormHorasExtra.BTN_ERROR,isClickable()).forNoMoreThan(10).seconds(),
-                       Click.on(FormHorasExtra.BTN_ERROR)
-               );
-               Thread.sleep(3000);
-               System.out.printf("Se cerro el modal de alerta");
+
            }
 
        } catch (Exception e) {

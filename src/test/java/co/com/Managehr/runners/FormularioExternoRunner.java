@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/usuario_externo_formulario.feature",
         glue = {"co.com.Managehr.stepsdefinitions.", "co.com.Managehr.utils.hooks"},
         snippets = SnippetType.CAMELCASE,
-        plugin = {"pretty","html:target/cucumber-reports"}
+        plugin = {"pretty", "html:target/cucumber-reports"}
 )
 public class FormularioExternoRunner {
 }
