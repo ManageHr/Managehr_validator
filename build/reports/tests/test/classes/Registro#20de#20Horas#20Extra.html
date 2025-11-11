@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">2</div>
+<div class="counter">1</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2m34.28s</div>
+<div class="counter">1m27.27s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,13 +81,8 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Intentar registrar horas extra dejando un campo vacío</td>
-<td class="success">1m33.49s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">Registrar horas extra exitosamente</td>
-<td class="success">1m0.80s</td>
+<td class="success">1m27.27s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -95,34 +90,38 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>    ?[32mDado ?[0m?[32mque el usuario ingresa con sus credenciales a ManageHR?[0m ?[90m# HorasExtraStepDefinitions.queElUsuarioIngresaConSusCredencialesAManageHR(String,String&gt;&gt;)?[0m
+<pre>    ?[32mDado ?[0m?[32mque el usuario se encuentra en la página de inicio de sesión de Managehr?[0m ?[90m# AutenticacionStepDefinitions.queElUsuarioSeEncuentraEnLaPáginaDeInicioDeSesiónDeManagehr()?[0m
+Ejecutando login con: sharon@gmail.com
+URL actual: https://evensoft21.com/managehr/Angular/home
+URL diferente a la esperada, pero continuando...
+AUTENTICACIÓN COMPLETADA
+    ?[32mCuando ?[0m?[32mingrese las credenciales correctas (correo y clave)?[0m                    ?[90m# AutenticacionStepDefinitions.ingreseLasCredencialesCorrectasCorreoYClave(CredencialesInicioSesion&gt;)?[0m
 
   @horas_extra
-  Escenario: Registrar horas extra exitosamente                       ?[90m# src/test/resources/features/horas_extra.feature:15?[0m
-    ?[32mCuando ?[0m?[32mregistra una solicitud de horas extra?[0m                      ?[90m# HorasExtraStepDefinitions.registraUnaSolicitudDeHorasExtra(String,String&gt;&gt;)?[0m
-    ?[32mEntonces ?[0m?[32mdebe visualizar la confirmación de envío de la solicitud?[0m ?[90m# HorasExtraStepDefinitions.debeVisualizarLaConfirmacionDeEnvioDeLaSolicitud()?[0m
-    ?[32mDado ?[0m?[32mque el usuario ingresa con sus credenciales a ManageHR?[0m ?[90m# HorasExtraStepDefinitions.queElUsuarioIngresaConSusCredencialesAManageHR(String,String&gt;&gt;)?[0m
-
-  @horas_extra
-  Escenario: Intentar registrar horas extra dejando un campo vacío               ?[90m# src/test/resources/features/horas_extra.feature:22?[0m
-    ?[32mCuando ?[0m?[32mregistra una solicitud de horas extra?[0m                                 ?[90m# HorasExtraStepDefinitions.registraUnaSolicitudDeHorasExtra(String,String&gt;&gt;)?[0m
+  Escenario: Registrar horas extra exitosamente                                  ?[90m# src/test/resources/features/horas_extra.feature:16?[0m
+Se dio click en Horas ExtraSe cerro el modal de alerta    ?[32mCuando ?[0m?[32mregistra una solicitud de horas extra?[0m                                 ?[90m# HorasExtraStepDefinitions.registraUnaSolicitudDeHorasExtra(HorasExtraUsuario&gt;)?[0m
+    ?[32mEntonces ?[0m?[32mdebe visualizar la confirmación de envío de la solicitud?[0m            ?[90m# HorasExtraStepDefinitions.debeVisualizarLaConfirmaciónDeEnvíoDeLaSolicitud()?[0m
+    ?[32mY ?[0m?[32mdebe aparecer una alerta de exito y cerrarse?[0m                               ?[90m# HorasExtraStepDefinitions.debeAparecerUnaAlertaDeExitoYCerrarse()?[0m
+Se cerro el modal de alerta    ?[32mCuando ?[0m?[32mregistra una solicitud de horas extra sin descripcion?[0m                 ?[90m# HorasExtraStepDefinitions.registraUnaSolicitudDeHorasExtraSinDescripcion(HorasExtraUsuario&gt;)?[0m
+No hay mensaje de error visible
     ?[32mEntonces ?[0m?[32mdebe visualizar el mensaje de error en el formulario de horas extra?[0m ?[90m# HorasExtraStepDefinitions.debeVisualizarElMensajeDeErrorEnElFormularioDeHorasExtra()?[0m
+    ?[32mY ?[0m?[32mse debe cerrar la alerta?[0m                                                   ?[90m# HorasExtraStepDefinitions.seDebeCerrarLaAlerta()?[0m
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>nov. 09, 2025 9:02:44 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+<pre>nov. 11, 2025 1:36:00 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --incognito;--start-maximized, goog:chromeOptions: {args: [--incognito, --start-maximized], extensions: [], prefs: {behavior: allow}}, loggingPrefs: org.openqa.selenium.logging..., name: proyecto, platform: ANY, unhandledPromptBehavior: ignore, version: }
-Starting ChromeDriver 141.0.7390.122 (b477534e7e10d193e916cd4e2967c589383625b2-refs/branch-heads/7390@{#2667}) on port 1058
+Starting ChromeDriver 141.0.7390.122 (b477534e7e10d193e916cd4e2967c589383625b2-refs/branch-heads/7390@{#2667}) on port 17514
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully on port 1058.
-[1762740172.119][WARNING]: This version of ChromeDriver has not been tested with Chrome version 142.
-nov. 09, 2025 9:02:52 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+ChromeDriver was started successfully on port 17514.
+[1762842966.527][WARNING]: This version of ChromeDriver has not been tested with Chrome version 142.
+nov. 11, 2025 1:36:06 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
@@ -134,29 +133,6 @@ INFORMACIÓN: Detected dialect: W3C
 
 TEST PASSED: Registrar horas extra exitosamente
 ----------------------------------------------------------------------------
-nov. 09, 2025 9:03:43 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
-INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --incognito;--start-maximized, goog:chromeOptions: {args: [--incognito, --start-maximized], extensions: [], prefs: {behavior: allow}}, loggingPrefs: org.openqa.selenium.logging..., name: proyecto, platform: ANY, unhandledPromptBehavior: ignore, version: }
-Starting ChromeDriver 141.0.7390.122 (b477534e7e10d193e916cd4e2967c589383625b2-refs/branch-heads/7390@{#2667}) on port 13057
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully on port 13057.
-[1762740226.286][WARNING]: This version of ChromeDriver has not been tested with Chrome version 142.
-nov. 09, 2025 9:03:46 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
-           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
-  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
- (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
-  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
- (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
-          \_\                                                            
-
-TEST FAILED WITH ERROR: Intentar registrar horas extra dejando un campo vacío
----------------------------------------------------------------------
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Sharon clicks on Enviar Solicitud
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - element click intercepted: Element &lt;button _ngcontent-ng-c2921343036=&quot;&quot; type=&quot;submit&quot; class=&quot;btn-submit&quot;&gt;...&lt;/button&gt; is not clickable at point (462, 530). Other element would receive the click: &lt;div class=&quot;swal2-container swal2-center swal2-backdrop-show&quot; data-swal2-theme=&quot;light&quot; style=&quot;overflow-y: auto;&quot;&gt;...&lt;/div&gt;
 </pre>
 </span>
 </div>
@@ -168,7 +144,7 @@ TEST FAILED WITH ERROR: Intentar registrar horas extra dejando un campo vacío
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 9/11/2025, 9:05:25 p. m.</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 11/11/2025, 1:37:30 a. m.</p>
 </div>
 </div>
 </body>

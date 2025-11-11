@@ -11,7 +11,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
         features = "src/test/resources/features/horas_extra.feature",
         glue = "co.com.Managehr.stepsdefinitions",
         snippets = SnippetType.CAMELCASE,
-        plugin = {"pretty"}
+        plugin = {"pretty","html:target/cucumber-reports"}
 )
 public class HorasExtraRunner {
 

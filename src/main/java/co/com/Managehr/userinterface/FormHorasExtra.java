@@ -33,16 +33,14 @@ public class FormHorasExtra {
             .located(By.xpath("//*[contains(normalize-space(.),'Solicitudes Enviadas')]/ancestor::*[self::aside or self::div][1]"));
 
     public static final Target ALERTA_EXITO = Target.the("Alerta/Toast éxito")
-            .located(By.xpath("//*[contains(@class,'alert-success') or contains(@class,'toast-success') or contains(normalize-space(.),'Solicitud enviada') or contains(normalize-space(.),'guardada')]"));
+            .located(By.xpath("//*[@id=\"swal2-title\"]"));
+    public static final Target BTN_EXITO = Target.the("Alerta/Toast éxito")
+            .located(By.xpath("/html/body/div/div/div[6]/button[1]"));
 
     public static final Target MODAL_ERROR = Target.the("Modal de error de campos obligatorios")
             .located(By.xpath(
-                    "//*[contains(@class,'swal2-popup') and " +
-                            ".//*[contains(normalize-space(.),'Todos los campos son obligatorios')]]"
+                    "//*[@id=\"swal2-title\"]"
             ));
-
-    public static final Target MODAL_ERROR_OK = Target.the("Botón OK del modal de error")
-            .located(By.xpath(
-                    "//button[contains(@class,'swal2-confirm') or contains(normalize-space(.),'OK')]"
-            ));
+    public static final Target BTN_ERROR = Target.the("Boton cerrar alerta de error ").
+            located(By.xpath("/html/body/div/div/div[6]/button[1]"));
 }

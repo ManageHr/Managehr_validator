@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Autenticación en la página de Managehr" skipped="0" tests="2" time="47.86" timestamp="2025-11-01 11:16:37"><testcase name="Verificar la autenticación exitosa en la página de Managehr"/><testcase name="Verificar mensaje de error con credenciales incorrectas"/></testsuite>
