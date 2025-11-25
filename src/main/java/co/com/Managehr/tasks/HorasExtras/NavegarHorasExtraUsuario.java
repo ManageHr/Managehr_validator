@@ -1,6 +1,6 @@
 package co.com.Managehr.tasks.HorasExtras;
 
-import co.com.Managehr.userinterface.FormHorasExtra;
+import co.com.Managehr.userinterface.HorasExtras.FormHorasExtra;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;

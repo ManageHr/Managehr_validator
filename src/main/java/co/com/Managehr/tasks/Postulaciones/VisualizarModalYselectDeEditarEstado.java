@@ -1,11 +1,9 @@
 package co.com.Managehr.tasks.Postulaciones;
 
-import co.com.Managehr.userinterface.GestionPostulacionesPage;
+import co.com.Managehr.userinterface.Postulaciones.GestionPostulacionesPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.By;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
