@@ -1,6 +1,6 @@
 package co.com.Managehr.tasks.Usuarios;
 
-import co.com.Managehr.userinterface.CrearUsuarioPage;
+import co.com.Managehr.userinterface.Usuarios.CrearUsuarioPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Enter;

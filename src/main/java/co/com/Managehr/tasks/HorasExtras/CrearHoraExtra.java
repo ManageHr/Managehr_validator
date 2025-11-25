@@ -1,25 +1,12 @@
 package co.com.Managehr.tasks.HorasExtras;
 
-import co.com.Managehr.models.HorasExtraUsuario;
-import co.com.Managehr.userinterface.CrearUsuarioPage;
-import co.com.Managehr.userinterface.FormHorasExtra;
-import net.serenitybdd.core.pages.WebElementFacade;
+import co.com.Managehr.models.HorasExtras.HorasExtraUsuario;
+import co.com.Managehr.userinterface.HorasExtras.FormHorasExtra;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.*;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 

@@ -1,6 +1,6 @@
 package co.com.Managehr.tasks.Postulaciones;
 
-import co.com.Managehr.userinterface.GestionPostulacionesPage;
+import co.com.Managehr.userinterface.Postulaciones.GestionPostulacionesPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 
