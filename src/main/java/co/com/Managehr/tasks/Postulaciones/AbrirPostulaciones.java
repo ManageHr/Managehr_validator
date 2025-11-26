@@ -18,7 +18,7 @@ public class AbrirPostulaciones implements Task {
     }
 
     public static AbrirPostulaciones abrir() {
-        return instrumented(AbrirPostulaciones.class, "Vacantes ","Gestion");
+        return instrumented(AbrirPostulaciones.class, "co/com/Managehr/models/Vacantes ","Gestion");
     }
 
     public static AbrirPostulaciones enSeccion(String seccion, String opcion) {
