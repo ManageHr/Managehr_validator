@@ -19,10 +19,6 @@ public class CambioEstadoPage extends PageObject {
             located(By.xpath("//*[@id=\"editarusuariosModal\"]/div/div/div[2]/form/button[1]"));
     public static final Target REGISTRO_EXTERNO = Target.the("modal para editar el estado").
             located(By.xpath("/html/body/app-root/app-usuarios/div/div/div[2]/div[4]/table/tbody/tr[1]"));
-    public static final Target INPUT_FILTRO_USUARIO = Target.the("modal para editar el estado").
-            located(By.xpath("//*[@id=\"tituloTargetasfiltro1\"]/input"));
-    public static final Target REGISTRO_INTERNO = Target.the("modal para editar el estado").
-            located(By.xpath("/html/body/app-root/app-usuarios/div/div/div[2]/div[2]/table/tbody/tr[1]"));
     public static final Target TABLA_EXTERNOS = Target.the("Tabla externos").
             located(By.xpath("/html/body/app-root/app-usuarios/div/div/div[2]/div[4]/table/tbody"));
     public static final Target MODAL_ESTADO = Target.the("Modal estado").
