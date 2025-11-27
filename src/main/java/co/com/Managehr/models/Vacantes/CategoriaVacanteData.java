@@ -9,7 +9,7 @@ public class CategoriaVacanteData {
     private String nuevaDescripcion;
 
     public CategoriaVacanteData() {
-        // Requerido por Cucumber para mapear la tabla de datos
+
     }
 
     public CategoriaVacanteData(String nombre,

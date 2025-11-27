@@ -24,15 +24,15 @@ public class EliminarCategoriaVacante implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                // 1. Click al ícono de eliminar en la fila de la categoría
+
                 Click.on(CategoriasVacantesPage.BTN_ELIMINAR.of(nombre)),
 
-                // 2. Esperar el SweetAlert de confirmación ("¿Eliminar...?") y confirmar
+
                 WaitUntil.the(CategoriasVacantesPage.BTN_CONFIRMAR_ELIMINAR, isVisible())
                         .forNoMoreThan(10).seconds(),
                 Click.on(CategoriasVacantesPage.BTN_CONFIRMAR_ELIMINAR),
 
-                // 3. Esperar el SweetAlert de éxito ("¡Eliminada!") y dar clic en OK
+
                 WaitUntil.the(CategoriasVacantesPage.BTN_ALERTA_OK, isVisible())
                         .forNoMoreThan(10).seconds(),
                 Click.on(CategoriasVacantesPage.BTN_ALERTA_OK)

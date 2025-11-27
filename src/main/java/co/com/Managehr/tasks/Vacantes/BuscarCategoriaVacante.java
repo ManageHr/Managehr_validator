@@ -27,18 +27,18 @@ public class BuscarCategoriaVacante implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                // Esperar campo de búsqueda
+
                 WaitUntil.the(CategoriasVacantesPage.INPUT_BUSCAR, isVisible())
                         .forNoMoreThan(15).seconds(),
 
-                // Foco explícito
+
                 Click.on(CategoriasVacantesPage.INPUT_BUSCAR),
 
-                // Limpiar y escribir
+
                 Clear.field(CategoriasVacantesPage.INPUT_BUSCAR),
                 Enter.theValue(nombre).into(CategoriasVacantesPage.INPUT_BUSCAR),
 
-                // Esperar que aparezca la fila filtrada con ese nombre
+
                 WaitUntil.the(CategoriasVacantesPage.FILA_CATEGORIA.of(nombre), isVisible())
                         .forNoMoreThan(15).seconds()
         );

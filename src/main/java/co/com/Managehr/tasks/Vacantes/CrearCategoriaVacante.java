@@ -30,21 +30,21 @@ public class CrearCategoriaVacante implements Task {
         String nombre = data.getNombre();
 
         actor.attemptsTo(
-                // Abrir modal "Agregar Categoría"
+
                 WaitUntil.the(CategoriasVacantesPage.BTN_AGREGAR_CATEGORIA, isVisible())
                         .forNoMoreThan(10).seconds(),
                 Click.on(CategoriasVacantesPage.BTN_AGREGAR_CATEGORIA),
 
-                // Esperar input del modal y escribir el nombre
+
                 WaitUntil.the(CategoriasVacantesPage.INPUT_NOMBRE_AGREGAR, isVisible())
                         .forNoMoreThan(10).seconds(),
                 Clear.field(CategoriasVacantesPage.INPUT_NOMBRE_AGREGAR),
                 Enter.theValue(nombre).into(CategoriasVacantesPage.INPUT_NOMBRE_AGREGAR),
 
-                // Guardar
+
                 Click.on(CategoriasVacantesPage.BTN_CONFIRMAR_AGREGAR),
 
-                // SweetAlert "Creada" (OK → luego el front hace window.location.reload())
+
                 WaitUntil.the(CategoriasVacantesPage.BTN_ALERTA_OK, isVisible())
                         .forNoMoreThan(10).seconds(),
                 Click.on(CategoriasVacantesPage.BTN_ALERTA_OK)

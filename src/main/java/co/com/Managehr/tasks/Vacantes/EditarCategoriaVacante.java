@@ -36,19 +36,18 @@ public class EditarCategoriaVacante implements Task {
                 : data.getNombre();
 
         actor.attemptsTo(
-                // 1. Click en editar de la fila con el nombre actual
+
                 Click.on(CategoriasVacantesPage.BTN_EDITAR.of(nombreActual)),
 
-                // 2. Esperar input del modal EDITAR
                 WaitUntil.the(CategoriasVacantesPage.INPUT_NOMBRE_EDITAR, isVisible())
                         .forNoMoreThan(15).seconds(),
                 Clear.field(CategoriasVacantesPage.INPUT_NOMBRE_EDITAR),
                 Enter.theValue(nuevoNombre).into(CategoriasVacantesPage.INPUT_NOMBRE_EDITAR),
 
-                // 3. Guardar cambios
+
                 Click.on(CategoriasVacantesPage.BTN_GUARDAR_CAMBIOS),
 
-                // 4. SweetAlert OK
+
                 WaitUntil.the(CategoriasVacantesPage.BTN_ALERTA_OK, isVisible())
                         .forNoMoreThan(15).seconds(),
                 Click.on(CategoriasVacantesPage.BTN_ALERTA_OK)

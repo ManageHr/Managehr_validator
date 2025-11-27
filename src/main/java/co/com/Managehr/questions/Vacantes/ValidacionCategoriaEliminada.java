@@ -18,8 +18,8 @@ public class ValidacionCategoriaEliminada implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
 
-        // Reintentamos unos segundos por si la tabla tarda en refrescar
-        for (int i = 0; i < 5; i++) {   // 5 intentos
+
+        for (int i = 0; i < 5; i++) {
             List<WebElementFacade> filas = CategoriasVacantesPage.FILA_CATEGORIA
                     .of(nombre)
                     .resolveAllFor(actor);
@@ -30,12 +30,12 @@ public class ValidacionCategoriaEliminada implements Question<Boolean> {
             System.out.println("[DEBUG] filas con nombre '" + nombre + "': " +
                     filas.size() + "  visible=" + existeVisible);
 
-            // Si ya no hay ninguna visible, consideramos que está eliminada
+
             if (!existeVisible) {
                 return true;
             }
 
-            // Si aún la ve, esperamos 1 segundo y volvemos a mirar
+
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -44,7 +44,7 @@ public class ValidacionCategoriaEliminada implements Question<Boolean> {
             }
         }
 
-        // Si después de los reintentos sigue apareciendo visible, NO se eliminó
+
         return false;
     }
 
