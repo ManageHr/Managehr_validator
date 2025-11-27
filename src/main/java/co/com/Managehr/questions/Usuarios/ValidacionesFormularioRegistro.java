@@ -19,7 +19,7 @@ public class ValidacionesFormularioRegistro implements Question<Object> {
     }
 
     private final TipoValidacion tipo;
-    private final String parametro; // para el caso de MENSAJE_VALIDACION_CAMPO
+    private final String parametro;
 
     public ValidacionesFormularioRegistro(TipoValidacion tipo) {
         this.tipo = tipo;
@@ -31,7 +31,6 @@ public class ValidacionesFormularioRegistro implements Question<Object> {
         this.parametro = parametro;
     }
 
-    // ==== Constructores estáticos "fluent" ====
     public static ValidacionesFormularioRegistro botonRegistrarHabilitado() {
         return new ValidacionesFormularioRegistro(TipoValidacion.BOTON_REGISTRAR_HABILITADO);
     }
@@ -44,7 +43,7 @@ public class ValidacionesFormularioRegistro implements Question<Object> {
         return new ValidacionesFormularioRegistro(TipoValidacion.MENSAJE_ERROR_DUPLICADO);
     }
 
-    /** Ejemplo: ValidacionesFormularioRegistro.errorCampo("correo") */
+
     public static ValidacionesFormularioRegistro errorCampo(String nombreCampo) {
         return new ValidacionesFormularioRegistro(TipoValidacion.MENSAJE_VALIDACION_CAMPO, nombreCampo);
     }
@@ -77,7 +76,7 @@ public class ValidacionesFormularioRegistro implements Question<Object> {
             }
         } catch (Exception e) {
             System.out.println("[ValidacionesRegistro] Error en " + tipo + ": " + e.getMessage());
-            // Devuelve valores razonables según el tipo
+
             if (tipo == TipoValidacion.MENSAJE_EXITO || tipo == TipoValidacion.MENSAJE_VALIDACION_CAMPO) {
                 return "No fue posible obtener el mensaje";
             }
@@ -85,7 +84,7 @@ public class ValidacionesFormularioRegistro implements Question<Object> {
         }
     }
 
-    // ====== Implementaciones privadas ======
+
 
     private Boolean validarBotonRegistrar(Actor actor) {
         boolean habilitado = FormularioExterno.BTN_REGISTRARSE.resolveFor(actor).isEnabled();
