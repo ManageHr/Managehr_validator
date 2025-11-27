@@ -18,7 +18,7 @@ public class ValidacionContrato implements Question<Boolean> {
 
 
         if (CrearContrato.usuarioNoExiste) {
-            CrearContrato.usuarioNoExiste = false; // limpiar para futuros tests
+            CrearContrato.usuarioNoExiste = false;
             return true;
         }
 
