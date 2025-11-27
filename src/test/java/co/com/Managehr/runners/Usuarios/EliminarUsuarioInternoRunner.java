@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/Usuarios/eliminar_usuario_interno.feature",
         glue = {"co.com.Managehr.stepsdefinitions", "co.com.Managehr.utils.hooks"},
         snippets = SnippetType.CAMELCASE,
-        tags = "@eliminar_usuario_interno"
+        tags = "@eliminar_usuario_interno",
+        plugin = {"pretty", "html:target/cucumber-reports"}
 )
 public class EliminarUsuarioInternoRunner {
 }
