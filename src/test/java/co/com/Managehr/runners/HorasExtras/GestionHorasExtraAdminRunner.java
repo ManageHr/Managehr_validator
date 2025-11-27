@@ -19,4 +19,6 @@ public class GestionHorasExtraAdminRunner {
     public static void configurarIncognito() {
         System.setProperty("chrome.switches", "--incognito;--start-maximized");
     }
+
+
 }
