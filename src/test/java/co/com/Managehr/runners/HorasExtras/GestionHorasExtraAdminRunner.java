@@ -13,6 +13,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
         snippets = SnippetType.CAMELCASE,
         plugin = {"pretty", "html:target/cucumber-reports"}
 )
+
 public class GestionHorasExtraAdminRunner {
 
     @BeforeClass
