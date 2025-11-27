@@ -1,6 +1,6 @@
 package co.com.Managehr.tasks.Usuarios;
 
-import co.com.Managehr.userinterface.CrearUsuarioPage;
+import co.com.Managehr.userinterface.Usuarios.CrearUsuarioPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -21,7 +21,6 @@ public class GuardarUsuario implements Task {
                 Click.on(CrearUsuarioPage.BTN_GUARDAR)
         );
         try {
-
             Thread.sleep(3000);
             System.out.println("Procesamiento completado - continuando con validación de alerta");
         } catch (InterruptedException e) {

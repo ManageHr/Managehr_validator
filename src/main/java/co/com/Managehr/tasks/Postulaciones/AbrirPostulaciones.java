@@ -1,6 +1,6 @@
 package co.com.Managehr.tasks.Postulaciones;
 
-import co.com.Managehr.userinterface.GestionPostulacionesPage;
+import co.com.Managehr.userinterface.Postulaciones.GestionPostulacionesPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -18,7 +18,7 @@ public class AbrirPostulaciones implements Task {
     }
 
     public static AbrirPostulaciones abrir() {
-        return instrumented(AbrirPostulaciones.class, "Vacantes ","Gestion");
+        return instrumented(AbrirPostulaciones.class, "co/com/Managehr/models/Vacantes ","Gestion");
     }
 
     public static AbrirPostulaciones enSeccion(String seccion, String opcion) {

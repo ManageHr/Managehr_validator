@@ -1,14 +1,10 @@
 package co.com.Managehr.tasks.Postulaciones;
 
-import co.com.Managehr.userinterface.GestionPostulacionesPage;
-import cucumber.api.DataTable;
+import co.com.Managehr.userinterface.Postulaciones.GestionPostulacionesPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.EnterValue;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.support.ui.ISelect;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
