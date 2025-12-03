@@ -103,7 +103,6 @@ public class VacacionesStepDefinitions {
     public void apruebaLaSolicitudDeVacacionesConMotivo(String motivo) {
         System.out.println(">>> Entró al step: aprueba la solicitud de vacaciones con motivo = " + motivo);
 
-        // 1. Click en el botón verde de la lista
         OnStage.theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(VacacionesJefePage.BTN_APROBAR_SOLICITUD, isClickable())
                         .forNoMoreThan(10).seconds(),
@@ -111,7 +110,6 @@ public class VacacionesStepDefinitions {
         );
         System.out.println(">>> Click en botón 'Aprobar solicitud' de la lista");
 
-        // 2. Esperar a que aparezca el modal y click en "Aprobar"
         OnStage.theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(VacacionesJefePage.BTN_MODAL_APROBAR, isClickable())
                         .forNoMoreThan(10).seconds(),
