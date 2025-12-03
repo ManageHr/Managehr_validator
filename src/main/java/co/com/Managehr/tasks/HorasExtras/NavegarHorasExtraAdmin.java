@@ -22,11 +22,11 @@ public class NavegarHorasExtraAdmin implements Task {
         actor.attemptsTo(
 
                 WaitUntil.the(FormHorasExtra.MENU_HORAS_EXTRA, isClickable())
-                        .forNoMoreThan(15).seconds(),
+                        .forNoMoreThan(8).seconds(),
                 Click.on(FormHorasExtra.MENU_HORAS_EXTRA),
 
                 WaitUntil.the(FormHorasExtra.LISTADO_HORAS_EXTRA_ADMIN, isVisible())
-                        .forNoMoreThan(15).seconds()
+                        .forNoMoreThan(8).seconds()
         );
     }
 }
