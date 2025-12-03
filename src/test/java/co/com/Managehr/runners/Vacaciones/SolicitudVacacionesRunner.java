@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/vacaciones/solicitud_vacaciones.feature",
+        features = "src/test/resources/features/Vacaciones/solicitud_vacaciones.feature",
         glue = "co.com.Managehr.stepsdefinitions",   // incluye Autentication y Vacaciones
         snippets = SnippetType.CAMELCASE,
         tags = "@solicitud_vacaciones"

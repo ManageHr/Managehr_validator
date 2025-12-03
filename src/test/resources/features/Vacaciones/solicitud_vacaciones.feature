@@ -15,3 +15,17 @@ Característica: Solicitud de vacaciones
     Y navega al módulo de Vacaciones
     Y diligencia el formulario de vacaciones
     Entonces debería visualizar un mensaje de confirmación de solicitud registrada
+    Y cierra la sesión actual
+    Y ingrese las credenciales correctas (correo y clave)
+      | email         | clave  |
+      | jefe@jefe.com | 123456 |
+
+    Y navega al módulo de vacaciones como jefe
+    Y aprueba la solicitud de vacaciones con motivo "Solicitud de vacaciones automatizada"
+    Entonces el estado de la solicitud debería ser "Aprobada"
+    Y navega al módulo de vacaciones como jefe
+    Y aprueba la solicitud de vacaciones con motivo "Solicitud de vacaciones automatizada"
+
+
+
+
