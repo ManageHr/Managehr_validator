@@ -16,8 +16,8 @@ public class CantidadSolicitudesHorasExtra implements Question<Integer> {
 
     @Override
     public Integer answeredBy(Actor actor) {
-        List<WebElementFacade> filas = BrowseTheWeb.as(actor)
-                .findAll(By.xpath("//table//tbody/tr"));
+        List filas = BrowseTheWeb.as(actor)
+                .findAll(By.cssSelector("table.table-striped tbody tr"));
         int total = filas.size();
         System.out.println("Cantidad actual de solicitudes de horas extra: " + total);
         return total;
