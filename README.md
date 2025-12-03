@@ -55,3 +55,8 @@ JDK Version: 15
 Gradle Version: 7.0+
 SDK Version: 22
 Chrome Driver: Incluido en /driver
+
+## Errores de commit 
+#### Descarta todos los cambios en los archivos generados
+- git checkout -- .gradle/
+- git checkout -- build/
