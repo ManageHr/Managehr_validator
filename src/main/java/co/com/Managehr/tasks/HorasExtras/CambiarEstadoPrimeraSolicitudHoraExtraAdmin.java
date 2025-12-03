@@ -43,23 +43,22 @@ public class CambiarEstadoPrimeraSolicitudHoraExtraAdmin implements Task {
 
         actor.attemptsTo(
                 WaitUntil.the(FormHorasExtra.BTN_CAMBIAR_ESTADO_PRIMERA_FILA_ADMIN, isClickable())
-                        .forNoMoreThan(10).seconds(),
+                        .forNoMoreThan(5).seconds(),
                 Click.on(FormHorasExtra.BTN_CAMBIAR_ESTADO_PRIMERA_FILA_ADMIN),
 
                 WaitUntil.the(FormHorasExtra.SELECT_ESTADO_MODAL_ADMIN, isVisible())
-                        .forNoMoreThan(10).seconds(),
+                        .forNoMoreThan(5).seconds(),
                 SelectFromOptions.byVisibleText(nuevoEstado)
                         .from(FormHorasExtra.SELECT_ESTADO_MODAL_ADMIN),
 
                 WaitUntil.the(FormHorasExtra.BTN_GUARDAR_CAMBIO_ESTADO_ADMIN, isClickable())
-                        .forNoMoreThan(10).seconds(),
+                        .forNoMoreThan(5).seconds(),
                 Click.on(FormHorasExtra.BTN_GUARDAR_CAMBIO_ESTADO_ADMIN),
-
 
                 WaitUntil.the(
                                 FormHorasExtra.ESTADO_SOLICITUD_POR_DOCUMENTO_ADMIN.of(documento),
                                 containsText(nuevoEstado))
-                        .forNoMoreThan(15).seconds()
+                        .forNoMoreThan(8).seconds()
         );
     }
 }
