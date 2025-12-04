@@ -35,7 +35,8 @@ public class CategoriasVacantesPage extends PageObject {
 
 
     public static final Target FILA_CATEGORIA = Target.the("Fila por nombre de categoría")
-            .locatedBy("//table//tr[td[normalize-space()='{0}']]");
+            .locatedBy("//table[contains(@class,'table')]//tbody/tr[td[2][normalize-space()='{0}']]");
+
 
     public static final Target BTN_EDITAR = Target.the("Botón editar por nombre de categoría")
             .locatedBy("//table//tr[td[normalize-space()='{0}']]//button[contains(@class,'editar')]");

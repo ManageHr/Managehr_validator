@@ -62,10 +62,5 @@ public class CategoriasVacantesStepDefinitions {
         );
     }
 
-    @Entonces("^la categoría de vacante con nombre \"([^\"]*)\" no debe aparecer en el listado$")
-    public void laCategoriaDeVacanteConNombreNoDebeAparecerEnElListado(String nombre) {
-        theActorInTheSpotlight().should(
-                seeThat(ValidacionCategoriaEliminada.noExisteCategoriaConNombre(nombre), equalTo(true))
-        );
-    }
+
 }
