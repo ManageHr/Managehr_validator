@@ -41,9 +41,6 @@ public class GestionHorasExtraAdminStepDefinitions {
     @Cuando("^elimina la primera solicitud de horas extra$")
     public void eliminaLaPrimeraSolicitudDeHorasExtra() {
 
-        cantidadInicial = theActorInTheSpotlight()
-                .asksFor(CantidadSolicitudesHorasExtra.actual());
-
         theActorInTheSpotlight().attemptsTo(
                 EliminarPrimeraSolicitudHoraExtraAdmin.registro()
         );

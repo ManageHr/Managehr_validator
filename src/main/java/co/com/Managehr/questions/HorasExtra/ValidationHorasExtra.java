@@ -27,12 +27,12 @@ public class ValidationHorasExtra implements Question<String> {
             if (MODAL_ERROR.resolveFor(actor).isVisible()) {
                 String mensaje = Text.of(MODAL_ERROR).viewedBy(actor).asString();
                 System.out.println("Mensaje de error capturado: " + mensaje);
-                Thread.sleep(3000);
+
                 return mensaje;
             } else {
 
                 System.out.println("No hay mensaje de error visible");
-                Thread.sleep(3000);
+
                 return "No se encontró mensaje de error";
             }
 
