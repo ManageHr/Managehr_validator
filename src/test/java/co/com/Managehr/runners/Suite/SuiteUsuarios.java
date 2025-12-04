@@ -1,5 +1,6 @@
 package co.com.Managehr.runners.Suite;
 
+import co.com.Managehr.runners.Contratos.ContratosRunner;
 import co.com.Managehr.runners.Postulaciones.GestionPostulacionesRunner;
 import co.com.Managehr.runners.Usuarios.CambioExternoEmpleadoRunner;
 import co.com.Managehr.runners.Usuarios.EliminarUsuarioInternoRunner;
@@ -13,8 +14,9 @@ import org.junit.runners.Suite;
         FormularioExternoRunner.class,
         RegistrarUsuarioRunner.class,
         CambioExternoEmpleadoRunner.class,
-        EliminarUsuarioInternoRunner.class,
-        GestionPostulacionesRunner.class
+        ContratosRunner.class,
+        EliminarUsuarioInternoRunner.class
+
 })
 public class SuiteUsuarios {
 }

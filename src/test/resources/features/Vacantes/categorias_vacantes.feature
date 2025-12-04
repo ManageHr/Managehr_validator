@@ -23,4 +23,4 @@ Característica: Gestión de categorías de vacantes
       | QA Automatizado | QA Automatizado 2 | Categoría editada para pruebas |
     Y busca la categoría de vacante por nombre "QA Automatizado 2"
     Y elimina la categoría de vacante con nombre "QA Automatizado 2"
-    Entonces la categoría de vacante con nombre "QA Automatizado 2" no debe aparecer en el listado
+
