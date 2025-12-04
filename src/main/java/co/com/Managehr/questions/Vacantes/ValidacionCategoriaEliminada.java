@@ -19,33 +19,13 @@ public class ValidacionCategoriaEliminada implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
 
 
-        for (int i = 0; i < 5; i++) {
-            List<WebElementFacade> filas = CategoriasVacantesPage.FILA_CATEGORIA
-                    .of(nombre)
-                    .resolveAllFor(actor);
+        List<WebElementFacade> filas = CategoriasVacantesPage.FILA_CATEGORIA
+                .of(nombre)
+                .resolveAllFor(actor);
 
-            boolean existeVisible = !filas.isEmpty() &&
-                    filas.stream().anyMatch(WebElementFacade::isVisible);
+        System.out.println("[DEBUG] Filas encontradas para '" + nombre + "': " + filas.size());
 
-            System.out.println("[DEBUG] filas con nombre '" + nombre + "': " +
-                    filas.size() + "  visible=" + existeVisible);
-
-
-            if (!existeVisible) {
-                return true;
-            }
-
-
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                break;
-            }
-        }
-
-
-        return false;
+        return filas.isEmpty();
     }
 
     public static ValidacionCategoriaEliminada noExisteCategoriaConNombre(String nombre) {
