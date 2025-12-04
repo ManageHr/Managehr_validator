@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
         snippets = SnippetType.CAMELCASE,
         tags = "@solicitud_vacaciones",
         plugin = {"pretty", "html:target/cucumber-reports"}
+
 )
 public class SolicitudVacacionesRunner {
 }
