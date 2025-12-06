@@ -6,7 +6,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         SuiteUsuarios.class,
-        SuiteRcursosHumanos.class
+        SuiteRcursosHumanos.class,
+        SuiteExternoyReportes.class
 })
 public class SuiteGeneralAll {
 }
