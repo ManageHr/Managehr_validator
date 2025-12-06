@@ -1,6 +1,5 @@
 package co.com.Managehr.runners.Suite;
 
-import co.com.Managehr.runners.Contratos.ContratosRunner;
 import co.com.Managehr.runners.HorasExtras.GestionHorasExtraAdminRunner;
 import co.com.Managehr.runners.HorasExtras.HorasExtraRunner;
 import co.com.Managehr.runners.Postulaciones.GestionPostulacionesRunner;
@@ -12,13 +11,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-
-        HorasExtraRunner.class,
-        GestionHorasExtraAdminRunner.class,
-        CategoriasVacantesRunner.class,
-        GestionPostulacionesRunner.class,
-        SolicitudVacacionesRunner.class
-
+        FormularioExternoRunner.class
 })
-public class SuiteRcursosHumanos {
+public class SuiteExternoyReportes {
 }
