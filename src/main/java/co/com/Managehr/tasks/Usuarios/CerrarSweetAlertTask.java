@@ -22,8 +22,7 @@ public class CerrarSweetAlertTask implements Task {
                 WaitUntil.the(GestionUsuariosPage.SWEETALERT_EXITO, isVisible())
                         .forNoMoreThan(10).seconds(),
                 Click.on(GestionUsuariosPage.BTN_CERRAR_SWEETALERT)
-                //WaitUntil.the(GestionUsuariosPage.SWEETALERT_EXITO, isNotVisible())
-                        //.forNoMoreThan(5).seconds()
+
         );
     }
 }

@@ -22,7 +22,7 @@ public class ConfirmarEliminacionTask implements Task {
         actor.attemptsTo(
                 WaitUntil.the(GestionUsuariosPage.BTN_CONFIRMAR_ELIMINAR, isClickable()).forNoMoreThan(5).seconds(),
                 Click.on(GestionUsuariosPage.BTN_CONFIRMAR_ELIMINAR)
-                //WaitUntil.the(GestionUsuariosPage.MODAL_CONFIRMAR_ELIMINACION, isNotVisible()).forNoMoreThan(5).seconds()
+
         );
     }
 }
