@@ -58,12 +58,8 @@ public class ContratosPage extends PageObject {
 
     public static final Target FILA_CONTRATO_POR_DOCUMENTO = Target.the("Fila de contrato por documento")
             .locatedBy("//table//tr[td[2][normalize-space()='{0}']]");
-    public static final Target TITULO_CONTRATOS_ALT = Target.the("Título Contratos")
-            .located(By.xpath("//h3[contains(text(),'Contratos')]"));
     public static final Target BOTON_ELIMINAR = Target.the("Botón eliminar")
             .located(By.xpath("//button[contains(@class, 'eliminar')]"));
-    public static final Target TITULO_CONTRATOS = Target.the("Título Gestión de Contratos")
-            .located(By.xpath("//h3[text()='Gestión de Contratos']"));
 
     public static final Target CAMPO_BUSQUEDA = Target.the("Campo de búsqueda")
             .located(By.xpath("//input[contains(@placeholder,'Buscar')]"));

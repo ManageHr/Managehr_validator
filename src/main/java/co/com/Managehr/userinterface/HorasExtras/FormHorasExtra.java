@@ -29,9 +29,6 @@ public class FormHorasExtra {
     public static final Target BTN_ENVIAR = Target.the("Enviar Solicitud")
             .located(By.xpath("//button[@type='submit' or contains(normalize-space(.),'Enviar Solicitud')]"));
 
-    public static final Target PANEL_SOLICITUDES = Target.the("Panel Solicitudes Enviadas")
-            .located(By.xpath("//*[contains(normalize-space(.),'Solicitudes Enviadas')]/ancestor::*[self::aside or self::div][1]"));
-
     public static final Target ALERTA_EXITO = Target.the("Alerta/Toast éxito")
             .located(By.xpath("//*[@id=\"swal2-title\"]"));
     public static final Target BTN_EXITO = Target.the("Alerta/Toast éxito")
@@ -41,30 +38,6 @@ public class FormHorasExtra {
             .located(By.xpath(
                     "//*[@id=\"swal2-title\"]"
             ));
-    public static final Target BTN_ERROR = Target.the("Boton cerrar alerta de error ").
-            located(By.xpath("/html/body/div/div/div[6]/button[1]"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public static final Target LISTADO_HORAS_EXTRA_ADMIN = Target.the("Listado de solicitudes de horas extra (vista admin)")
             .located(By.xpath("//table//thead//th[contains(normalize-space(.),'Nombre')]"));
@@ -104,9 +77,6 @@ public class FormHorasExtra {
 
     public static final Target BTN_ELIMINAR_SOLICITUD_POR_DOCUMENTO_ADMIN = Target.the("Botón eliminar de la solicitud de horas extra por documento (admin)")
             .locatedBy("//table//tbody/tr[td[2][normalize-space(text())='{0}']]//button[contains(@class,'btn-danger') or .//i[contains(@class,'fa-trash')]]");
-
-
-
 
 
 }

@@ -22,10 +22,6 @@ public class CategoriasVacantesPage extends PageObject {
             .located(By.xpath("//input[contains(@placeholder,'Buscar por Nombre')]"));
 
 
-    public static final Target INPUT_NOMBRE = Target.the("Input nombre de categoría en el modal")
-            .located(By.xpath("//input[@name='nomCategoria']"));
-
-
     public static final Target BTN_CONFIRMAR_AGREGAR = Target.the("Botón confirmar agregar categoría")
             .located(By.xpath("//div[@id='agregarCategoriaModal']//button[@type='submit']"));
 

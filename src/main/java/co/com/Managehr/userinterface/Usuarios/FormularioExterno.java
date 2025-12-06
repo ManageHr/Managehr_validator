@@ -35,12 +35,6 @@ public class FormularioExterno {
     public static Target MENSAJE_EXITO_REGISTRO = Target.the("Mensaje de éxito en registro")
             .located(By.cssSelector(".toast-success, .alert-success, .swal2-popup .swal2-html-container"));
 
-    public static Target MENSAJE_ERROR_REGISTRO = Target.the("Mensaje de error en registro")
-            .located(By.cssSelector(".toast-error, .alert-danger, .invalid-feedback, .mat-error"));
-
-    public static Target SWEETALERT_POPUP = Target.the("SweetAlert popup")
-            .located(By.cssSelector(".swal2-container .swal2-popup"));
-
     public static Target SWEETALERT_TITLE = Target.the("SweetAlert título")
             .located(By.id("swal2-title"));
 

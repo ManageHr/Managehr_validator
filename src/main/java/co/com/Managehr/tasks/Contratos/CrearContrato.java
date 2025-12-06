@@ -120,7 +120,7 @@ public class CrearContrato implements Task {
                 WaitUntil.the(ContratosPage.BTN_GUARDAR_CONTRATO, isClickable()).forNoMoreThan(15).seconds(),
                 Click.on(ContratosPage.BTN_GUARDAR_CONTRATO)
         );
-        /*esperar();*/
+
 
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();
         WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -158,16 +158,7 @@ public class CrearContrato implements Task {
                     System.out.println("No fue posible cerrar el modal Agregar Contrato: " + e.getMessage());
                 }
                 cerrarModalAgregarContrato(driver, wait);
-               /* try {
-                    By buscadorLocator = By.xpath("//input[contains(@placeholder,'Buscar por nombre')]");
-                    WebElement buscador = wait.until(ExpectedConditions.elementToBeClickable(buscadorLocator));
-                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", buscador);
-                    buscador.clear();
-                    buscador.sendKeys(datos.getDocumento());
-                    buscador.sendKeys(Keys.ENTER);
-                } catch (Exception e) {
-                    System.out.println("No fue posible buscar el contrato por documento: " + e.getMessage());
-                }*/
+
             }
 
         } catch (TimeoutException e) {
@@ -178,7 +169,7 @@ public class CrearContrato implements Task {
     }
     private void cerrarModalAgregarContrato(WebDriver driver, WebDriverWait wait) {
         try {
-            // Intentar método 1: Botón cerrar (X)
+
             try {
                 WebElement botonCerrar = wait.until(
                         ExpectedConditions.elementToBeClickable(
@@ -189,10 +180,10 @@ public class CrearContrato implements Task {
                 System.out.println("Modal cerrado con botón X");
                 return;
             } catch (Exception e1) {
-                // Continuar con siguiente método
+
             }
 
-            // Intentar método 2: Botón Cancelar
+
             try {
                 WebElement botonCancelar = wait.until(
                         ExpectedConditions.elementToBeClickable(
@@ -203,10 +194,10 @@ public class CrearContrato implements Task {
                 System.out.println("Modal cerrado con botón Cancelar");
                 return;
             } catch (Exception e2) {
-                // Continuar con siguiente método
+
             }
 
-            // Intentar método 3: Cerrar con JavaScript
+
             try {
                 WebElement modal = driver.findElement(By.id("agregarContratoModal"));
                 ((JavascriptExecutor) driver).executeScript(
@@ -219,20 +210,20 @@ public class CrearContrato implements Task {
                 System.out.println("Modal cerrado con JavaScript");
                 return;
             } catch (Exception e3) {
-                // Continuar con siguiente método
+
             }
 
-            // Intentar método 4: Presionar ESC
+
             try {
                 WebElement modal = driver.findElement(By.id("agregarContratoModal"));
                 modal.sendKeys(Keys.ESCAPE);
                 System.out.println("Modal cerrado con ESC");
                 return;
             } catch (Exception e4) {
-                // Continuar con siguiente método
+
             }
 
-            // Intentar método 5: Clic fuera del modal (en backdrop)
+
             try {
                 WebElement backdrop = driver.findElement(By.cssSelector(".modal-backdrop.fade.show"));
                 backdrop.click();

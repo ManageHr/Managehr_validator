@@ -19,7 +19,6 @@ public class UsuarioEliminado implements Question<Boolean> {
         try {
             System.out.println("=== VALIDANDO ELIMINACIÓN - VERSIÓN MEJORADA ===");
 
-            // Opción 1: Verificar que la tabla existe y no contiene el documento
             boolean tablaVisible = Visibility.of(GestionUsuariosPage.TABLA_INTERNOS).viewedBy(actor).resolve();
 
             if (!tablaVisible) {
@@ -27,18 +26,15 @@ public class UsuarioEliminado implements Question<Boolean> {
                 return true;
             }
 
-            // Buscar el documento específico en toda la tabla
+
             String contenidoTabla = GestionUsuariosPage.TABLA_INTERNOS.resolveFor(actor).getText();
             System.out.println("Contenido tabla: " + contenidoTabla);
-
             boolean documentoEncontrado = contenidoTabla.contains(DOCUMENTO_ELIMINAR);
             System.out.println("Documento encontrado en tabla: " + documentoEncontrado);
-
             return !documentoEncontrado;
 
         } catch (Exception e) {
             System.out.println("Excepción en validación: " + e.getMessage());
-            // Si hay error, asumimos que el usuario fue eliminado
             return true;
         }
     }
