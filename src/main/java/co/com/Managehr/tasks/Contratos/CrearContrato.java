@@ -58,39 +58,39 @@ public class CrearContrato implements Task {
                 WaitUntil.the(ContratosPage.MENU_CONTRATOS, isClickable()).forNoMoreThan(10).seconds(),
                 Click.on(ContratosPage.MENU_CONTRATOS)
         );
-        esperar();
+
 
         actor.attemptsTo(
                 WaitUntil.the(ContratosPage.BTN_AGREGAR_CONTRATO, isClickable()).forNoMoreThan(10).seconds(),
                 Click.on(ContratosPage.BTN_AGREGAR_CONTRATO)
         );
-        esperar();
+
 
         actor.attemptsTo(
                 WaitUntil.the(ContratosPage.INPUT_NUMERO_DOCUMENTO, isVisible()).forNoMoreThan(10).seconds(),
                 Enter.theValue(datos.getDocumento()).into(ContratosPage.INPUT_NUMERO_DOCUMENTO),
                 Hit.the(Keys.TAB).into(ContratosPage.INPUT_NUMERO_DOCUMENTO)
         );
-        esperar();
+
 
         actor.attemptsTo(
                 WaitUntil.the(ContratosPage.SELECT_TIPO_CONTRATO, isVisible()).forNoMoreThan(5).seconds(),
                 SelectFromOptions.byVisibleText(datos.getTipoContrato()).from(ContratosPage.SELECT_TIPO_CONTRATO)
         );
-        esperar();
+
 
         actor.attemptsTo(
                 WaitUntil.the(ContratosPage.SELECT_ESTADO, isVisible()).forNoMoreThan(5).seconds(),
                 SelectFromOptions.byVisibleText(datos.getEstado()).from(ContratosPage.SELECT_ESTADO)
         );
-        esperar();
+
 
         if (datos.getFechaIngreso() != null && !datos.getFechaIngreso().trim().isEmpty()) {
             actor.attemptsTo(
                     Enter.theValue(datos.getFechaIngreso()).into(ContratosPage.INPUT_FECHA_INGRESO),
                     Hit.the(Keys.TAB).into(ContratosPage.INPUT_FECHA_INGRESO)
             );
-            esperar();
+
         }
 
         if (datos.getFechaFinal() != null && !datos.getFechaFinal().trim().isEmpty()) {
@@ -98,32 +98,32 @@ public class CrearContrato implements Task {
                     Enter.theValue(datos.getFechaFinal()).into(ContratosPage.INPUT_FECHA_FINAL),
                     Hit.the(Keys.TAB).into(ContratosPage.INPUT_FECHA_FINAL)
             );
-            esperar();
+
         }
 
         actor.attemptsTo(
                 SelectFromOptions.byVisibleText(datos.getArea()).from(ContratosPage.SELECT_AREA),
                 SelectFromOptions.byVisibleText(datos.getCargo()).from(ContratosPage.SELECT_CARGO)
         );
-        esperar();
+
 
         if (!rutaArchivo.isEmpty()) {
             File archivo = new File(rutaArchivo);
             if (archivo.exists()) {
                 ContratosPage.INPUT_DOCUMENTO_ADJUNTO.resolveFor(actor).sendKeys(archivo.getAbsolutePath());
             }
-            esperar();
+
         }
 
         actor.attemptsTo(
                 Scroll.to(ContratosPage.BTN_GUARDAR_CONTRATO),
-                WaitUntil.the(ContratosPage.BTN_GUARDAR_CONTRATO, isClickable()).forNoMoreThan(5).seconds(),
+                WaitUntil.the(ContratosPage.BTN_GUARDAR_CONTRATO, isClickable()).forNoMoreThan(15).seconds(),
                 Click.on(ContratosPage.BTN_GUARDAR_CONTRATO)
         );
-        esperar();
+        /*esperar();*/
 
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 20);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
 
         try {
             WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".swal2-popup")));
@@ -157,8 +157,8 @@ public class CrearContrato implements Task {
                 } catch (Exception e) {
                     System.out.println("No fue posible cerrar el modal Agregar Contrato: " + e.getMessage());
                 }
-
-                try {
+                cerrarModalAgregarContrato(driver, wait);
+               /* try {
                     By buscadorLocator = By.xpath("//input[contains(@placeholder,'Buscar por nombre')]");
                     WebElement buscador = wait.until(ExpectedConditions.elementToBeClickable(buscadorLocator));
                     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", buscador);
@@ -167,13 +167,82 @@ public class CrearContrato implements Task {
                     buscador.sendKeys(Keys.ENTER);
                 } catch (Exception e) {
                     System.out.println("No fue posible buscar el contrato por documento: " + e.getMessage());
-                }
+                }*/
             }
 
         } catch (TimeoutException e) {
             System.out.println("No se detectó SweetAlert.");
         }
 
-        esperar();
+
+    }
+    private void cerrarModalAgregarContrato(WebDriver driver, WebDriverWait wait) {
+        try {
+            // Intentar método 1: Botón cerrar (X)
+            try {
+                WebElement botonCerrar = wait.until(
+                        ExpectedConditions.elementToBeClickable(
+                                By.xpath("//div[@id='agregarContratoModal']//button[@data-bs-dismiss='modal']")
+                        )
+                );
+                botonCerrar.click();
+                System.out.println("Modal cerrado con botón X");
+                return;
+            } catch (Exception e1) {
+                // Continuar con siguiente método
+            }
+
+            // Intentar método 2: Botón Cancelar
+            try {
+                WebElement botonCancelar = wait.until(
+                        ExpectedConditions.elementToBeClickable(
+                                By.xpath("//div[@id='agregarContratoModal']//button[contains(text(),'Cancelar')]")
+                        )
+                );
+                botonCancelar.click();
+                System.out.println("Modal cerrado con botón Cancelar");
+                return;
+            } catch (Exception e2) {
+                // Continuar con siguiente método
+            }
+
+            // Intentar método 3: Cerrar con JavaScript
+            try {
+                WebElement modal = driver.findElement(By.id("agregarContratoModal"));
+                ((JavascriptExecutor) driver).executeScript(
+                        "arguments[0].classList.remove('show');" +
+                                "arguments[0].style.display = 'none';" +
+                                "document.body.classList.remove('modal-open');" +
+                                "document.querySelector('.modal-backdrop')?.remove();",
+                        modal
+                );
+                System.out.println("Modal cerrado con JavaScript");
+                return;
+            } catch (Exception e3) {
+                // Continuar con siguiente método
+            }
+
+            // Intentar método 4: Presionar ESC
+            try {
+                WebElement modal = driver.findElement(By.id("agregarContratoModal"));
+                modal.sendKeys(Keys.ESCAPE);
+                System.out.println("Modal cerrado con ESC");
+                return;
+            } catch (Exception e4) {
+                // Continuar con siguiente método
+            }
+
+            // Intentar método 5: Clic fuera del modal (en backdrop)
+            try {
+                WebElement backdrop = driver.findElement(By.cssSelector(".modal-backdrop.fade.show"));
+                backdrop.click();
+                System.out.println("Modal cerrado con clic en backdrop");
+            } catch (Exception e5) {
+                System.out.println("No se pudo cerrar el modal con ningún método");
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error al intentar cerrar modal: " + e.getMessage());
+        }
     }
 }

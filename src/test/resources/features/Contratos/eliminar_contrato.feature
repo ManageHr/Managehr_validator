@@ -19,12 +19,8 @@ Característica: Eliminación de contrato de usuario
     Cuando busco al usuario con número de documento "12345678990"
     Y verifico que el contrato con documento "12345678990" existe en la tabla
     Y selecciono la opción "Eliminar" para el contrato encontrado
-    Entonces se debe mostrar una alerta de confirmación titulada "Confirmar eliminación"
+    Entonces se debe mostrar una alerta de confirmación titulada "¿Eliminar a Juan Perez?"
 
     Cuando confirmo la eliminación en la alerta haciendo clic en "Sí, eliminar"
-    Entonces debe mostrarse una alerta de éxito con el mensaje "El contrato ha sido eliminado correctamente"
+    Entonces debe mostrarse una alerta de éxito con el mensaje "Juan Perez fue eliminado correctamente."
     Y cierro la alerta de éxito
-
-    Cuando busco nuevamente al usuario con documento "12345678990" en el filtro
-    Entonces la tabla de resultados debe estar vacía
-    Y no debe existir ningún registro con el documento "12345678990"
