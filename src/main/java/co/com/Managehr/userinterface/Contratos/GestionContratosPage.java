@@ -29,4 +29,13 @@ public class GestionContratosPage extends PageObject {
 
     public static final Target BOTON_ACEPTAR_EXITO = Target.the("Botón 'Aceptar' en alerta de éxito")
             .located(By.xpath("//button[contains(@class,'swal2-confirm') and contains(text(),'Aceptar')]"));
+    public static final Target BOTON_REPORTES = Target.the("Boton de generar reporte")
+            .located(By.xpath("//*[@id=\"tituloTargetas1\"]/div/button[2]"));
+    public static final Target MODAL_REPORTE = Target.the("Modal contratos area")
+            .located(By.xpath("//*[@id=\"modalReporteContratos\"]/div/div/div[1]/h5"));
+    public static final Target BTN_DESCARGAR_EXCEL = Target.the("Exportar a excel")
+            .located(By.xpath("//*[@id=\"modalReporteContratos\"]/div/div/div[3]/button[1]"));
+    public static final Target BTN_DESCARGAR_PDF = Target.the("Exportar a excel")
+            .located(By.xpath("//*[@id=\"modalReporteContratos\"]/div/div/div[3]/button[2]"));
+
 }
